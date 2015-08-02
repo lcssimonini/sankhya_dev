@@ -54,14 +54,6 @@ public class Contato {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-	
-	public int getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
-	}
 
 	public String getNome() {
 		return nome;
@@ -103,32 +95,12 @@ public class Contato {
 		this.departamento = departamento;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((cliente == null) ? 0 : cliente.hashCode());
-		result = prime * result + codigo;
-		return result;
+	public int getCodigo() {
+		return codigo;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Contato other = (Contato) obj;
-		if (cliente == null) {
-			if (other.cliente != null)
-				return false;
-		} else if (!cliente.equals(other.cliente))
-			return false;
-		if (codigo != other.codigo)
-			return false;
-		return true;
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
     
     

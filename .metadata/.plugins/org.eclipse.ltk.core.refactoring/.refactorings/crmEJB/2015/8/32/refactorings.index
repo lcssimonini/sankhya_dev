@@ -1,3 +1,4 @@
 1438546206156	Move compilation unit
 1438546309561	Move compilation unit
 1438547384757	Rename package 'br.com.simonini.entity'
+1438553355910	Encapsulate field 'codigo'

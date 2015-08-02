@@ -45,106 +45,89 @@ public class Cliente {
     public Cliente() {
     }
     
+    
+
 	public Set<Contato> getContatos() {
 		return contatos;
 	}
-	
+
+
+
 	public void setContatos(Set<Contato> contatos) {
 		this.contatos = contatos;
 	}
-	
+
+
+
 	public String getNome() {
 		return nome;
 	}
-	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
 	public String getEndereco() {
 		return endereco;
 	}
-	
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	
 	public String getNumero() {
 		return numero;
 	}
-	
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	
 	public String getTelefone() {
 		return telefone;
 	}
-	
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
 	public int getTipo() {
 		return tipo;
 	}
-	
 	public void setTipo(int tipo) {
 		this.tipo = tipo;
 	}
-
 	public String getDocumento() {
 		return documento;
 	}
-	
 	public void setDocumento(String documento) {
 		this.documento = documento;
 	}
-	
 	public String getCidade() {
 		return cidade;
 	}
-	
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-	
 	public String getEstado() {
 		return estado;
 	}
-	
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	
 	public String getEmail() {
 		return email;
 	}
-	
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 	public int getPorte() {
 		return porte;
 	}
-	
 	public void setPorte(int porte) {
 		this.porte = porte;
 	}
-	
 	public double getLimiteCredito() {
 		return limiteCredito;
 	}
-	
 	public void setLimiteCredito(double limiteCredito) {
 		this.limiteCredito = limiteCredito;
 	}
-	
 	public Date getDataCadastro() {
 		return dataCadastro;
 	}
-	
 	public void setDataCadastro(Date dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
