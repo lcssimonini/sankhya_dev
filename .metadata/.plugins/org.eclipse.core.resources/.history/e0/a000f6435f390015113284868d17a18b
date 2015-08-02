@@ -1,0 +1,10 @@
+package br.com.simonini.models;
+
+
+public class Contato {
+
+    public Contato() {
+
+    }
+
+}

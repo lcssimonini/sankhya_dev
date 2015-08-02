@@ -1,0 +1,38 @@
+package br.com.simonini.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="mercadoria")
+public class Contato {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	private String nome;
+	private String endereco;
+	private String numero;
+	private String telefone;
+	
+	// 1 - pessoa fisica
+	// 2 - pessoa juridica
+	private int tipo;
+	private String documento;
+	private String cidade;
+	private String estado;
+	private String email;
+	// 1 - micro
+	// 2 - pessoa juridica
+	private int porte;
+	
+	
+	
+    public Contato() {
+
+    }
+
+}

@@ -1,0 +1,40 @@
+package br.com.simonini.models;
+
+import java.sql.Date;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@entity
+@Table(name="cliente")
+public class Cliente {
+
+    public Cliente() {
+    }
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	private String nome;
+	private String endereco;
+	private String numero;
+	private String telefone;
+	
+	// 1 - pessoa fisica
+	// 2 - pessoa juridica
+	private int tipo;
+	private String documento;
+	private String cidade;
+	private String estado;
+	private String email;
+	// 1 - micro
+	// 2 - pequeno
+	// 3 - medio
+	// 4 - grande
+	private int porte;
+	private double limiteCredito;
+	private Date dataCadastro;
+    
+}
