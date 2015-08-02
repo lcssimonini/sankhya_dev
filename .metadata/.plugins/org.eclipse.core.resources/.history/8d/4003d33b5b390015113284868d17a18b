@@ -1,0 +1,16 @@
+package br.com.simonini.models;
+
+import javax.ejb.Stateless;
+
+import br.com.simonini.interfaces.ClienteLocal;
+
+public class Cliente implements ClienteLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public Cliente() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

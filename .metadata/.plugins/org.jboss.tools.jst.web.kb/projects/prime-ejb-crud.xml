@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/resteasy/jaxrs-api/2.1.0.GA/jaxrs-api-2.1.0.GA.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/hibernate/hibernate-validator/4.3.1.Final/hibernate-validator-4.3.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/xml/ws/api/main/jboss-jaxws-api_2.2_spec-2.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/interceptor/jboss-interceptors-api_1.1_spec/1.0.0.Final/jboss-interceptors-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/servlet/jsp/jboss-jsp-api_2.2_spec/1.0.0.Final/jboss-jsp-api_2.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/enterprise/cdi-api/1.0-SP4/cdi-api-1.0-SP4.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/xml/registry/jboss-jaxr-api_1.0_spec/1.0.0.Final/jboss-jaxr-api_1.0_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/activation/api/main/activation-1.1.1.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/annotation/api/main/jboss-annotations-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/enterprise/deploy/jboss-jad-api_1.2_spec/1.0.0.Final/jboss-jad-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-2.3.2.Final-jandex.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/enterprise/api/main/cdi-api-1.0-SP4.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/resource/api/main/jboss-connector-api_1.6_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/resteasy/resteasy-jaxrs/main/resteasy-jaxrs-2.3.2.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/jms/api/main/jboss-jms-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/primefaces/primefaces/3.4/primefaces-3.4.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-3.4.jar/meta-inf/faces-config.xml" project="prime-ejb-crud"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-3.4.jar/meta-inf/primefaces-p.taglib.xml" project="prime-ejb-crud"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/xml/rpc/jboss-jaxrpc-api_1.1_spec/1.0.0.Final/jboss-jaxrpc-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/xml/bind/jboss-jaxb-api_2.2_spec/1.0.0.Final/jboss-jaxb-api_2.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/security/jacc/api/main/jboss-jacc-api_1.4_spec-1.0.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/mail/mail/1.4.2/mail-1.4.2.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0-rt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0-rt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fn.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/permittedtaglibs.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/scriptfree.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0-rt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0-rt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x.tld" project="prime-ejb-crud"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/jms/jboss-jms-api_1.1_spec/1.0.0.Final/jboss-jms-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/resource/jboss-connector-api_1.5_spec/1.0.0.Final/jboss-connector-api_1.5_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/mail/api/main/mail-1.4.4.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/faces/api/main/jboss-jsf-api_2.1_spec-2.0.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/com/sun/faces/jsf-api/2.1.11/jsf-api-2.1.11.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/wsdl4j/api/main/wsdl4j-1.6.2.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/resteasy/resteasy-jaxrs/main/async-http-servlet-3.0-2.3.2.Final-jandex.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/inject/api/main/javax.inject-1.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/persistence/api/main/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.1.Final/hibernate-commons-annotations-4.0.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/xml/ws/jboss-jaxws-api_2.2_spec/1.0.0.Final/jboss-jaxws-api_2.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/servlet/jstl/api/main/jboss-jstl-api_1.2_spec-1.0.2.Final.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/c-1_0-rt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/c-1_0.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/c.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/fmt-1_0-rt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/fmt-1_0.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/fmt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/fn.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/permittedtaglibs.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/scriptfree.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/sql-1_0-rt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/sql-1_0.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/sql.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/x-1_0-rt.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/x-1_0.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jboss-jstl-api_1.2_spec-1.0.2.Final.jar/meta-inf/x.tld" project="prime-ejb-crud"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/ejb/jboss-ejb-api_3.1_spec/1.0.0.Final/jboss-ejb-api_3.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/picketbox/main/picketbox-commons-1.0.0.final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/picketbox/main/picketbox-infinispan-4.0.7.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/resteasy/resteasy-jaxrs/main/async-http-servlet-3.0-2.3.2.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-2.3.2.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/hibernate/validator/main/hibernate-validator-4.2.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/servlet/api/main/jboss-servlet-api_3.0_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/security/auth/message/jboss-jaspi-api_1.0_spec/1.0.0.Final/jboss-jaspi-api_1.0_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/security/auth/message/api/main/jboss-jaspi-api_1.0_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/ejb3/main/jboss-ejb3-ext-api-2.0.0.jar"/>
+  <path value="/prime-ejb-crud/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="prime-ejb-crud"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/el/jboss-el-api_2.2_spec/1.0.0.Final/jboss-el-api_2.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/jws/jsr181-api/1.0-MR1/jsr181-api-1.0-MR1.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/as/controller-client/main/jboss-as-controller-client-7.1.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/xml/rpc/api/main/jboss-jaxrpc-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/resteasy/resteasy-multipart-provider/main/resteasy-multipart-provider-2.3.2.Final-jandex.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/com/sun/faces/jsf-impl/2.1.11/jsf-impl-2.1.11.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/meta-inf/html_basic.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/meta-inf/jsf_core.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/meta-inf/mojarra_ext.taglib.xml" project="prime-ejb-crud"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/meta-inf/mojarra_ext.tld" project="prime-ejb-crud"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/com/sun/faces/metadata/taglib/composite.taglib.xml" project="prime-ejb-crud"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml" project="prime-ejb-crud"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/com/sun/faces/metadata/taglib/html_basic.taglib.xml" project="prime-ejb-crud"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/com/sun/faces/metadata/taglib/jstl-core.taglib.xml" project="prime-ejb-crud"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/com/sun/faces/metadata/taglib/jstl-fn.taglib.xml" project="prime-ejb-crud"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/com/sun/faces/metadata/taglib/mojarra_ext.taglib.xml" project="prime-ejb-crud"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl-2.1.11.jar/com/sun/faces/metadata/taglib/ui.taglib.xml" project="prime-ejb-crud"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/dmr/main/jboss-dmr-1.1.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/management/j2ee/api/main/jboss-j2eemgmt-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/resteasy/resteasy-jaxb-provider/main/resteasy-jaxb-provider-2.3.2.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/el/el-api/2.2/el-api-2.2.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/resteasy/resteasy-jaxrs/main/resteasy-jaxrs-2.3.2.Final-jandex.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/glassfish/web/el-impl/2.2/el-impl-2.2.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/hibernate/hibernate-core/4.1.6.Final/hibernate-core-4.1.6.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/servlet/jsp/api/main/jboss-jsp-api_2.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/picketbox/main/picketbox-4.0.7.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/interceptor/api/main/jboss-interceptors-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/ejb/api/main/jboss-ejb-api_3.1_spec-1.0.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/validation/api/main/validation-api-1.0.0.GA.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/xml/soap/api/main/jboss-saaj-api_1.3_spec-1.0.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/logging/main/jboss-logging-3.1.0.GA.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/security/jacc/jboss-jacc-api_1.4_spec/1.0.0.Final/jboss-jacc-api_1.4_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/servlet/jboss-servlet-api_3.0_spec/1.0.0.Final/jboss-servlet-api_3.0_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/rmi/api/main/jboss-rmi-api_1.0_spec-1.0.4.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/transaction/api/main/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/xml/registry/api/main/jboss-jaxr-api_1.0_spec-1.0.1.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/xml/bind/api/main/jboss-jaxb-api_2.2_spec-1.0.3.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/annotation/jboss-annotations-api_1.1_spec/1.0.0.Final/jboss-annotations-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/enterprise/deploy/api/main/jboss-jad-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/ws/rs/api/main/jboss-jaxrs-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/el/api/main/jboss-el-api_2.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/xml/soap/jboss-saaj-api_1.3_spec/1.0.0.Final/jboss-saaj-api_1.3_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/hibernate/hibernate-entitymanager/4.1.6.Final/hibernate-entitymanager-4.1.6.Final.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/javax/xml/jaxrpc-api/1.1/jaxrpc-api-1.1.jar"/>
+  <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/jws/api/main/jsr181-api-1.0-MR1.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification">
+   <linked-resource declaration="true" name="%1;%2;%3;" path="%0"/>
+  </core>
+  <core validator-id="jboss.cdi.core"/>
+  <el>
+   <linked-el length="29" name="%4" offset="523" path="%5"/>
+   <linked-el length="30" name="%4" offset="477" path="%6"/>
+   <linked-el length="35" name="%4" offset="1932" path="%7"/>
+   <linked-el length="27" name="%4" offset="542" path="%6"/>
+   <linked-el length="35" name="%4" offset="1950" path="%6"/>
+   <linked-el length="43" name="%4" offset="1251" path="%6"/>
+   <linked-el length="22" name="%4" offset="340" path="%5"/>
+   <linked-el length="34" name="%4" offset="1119" path="%6"/>
+   <linked-el length="29" name="%4" offset="591" path="%5"/>
+   <linked-el length="38" name="%4" offset="2898" path="%7"/>
+   <linked-el length="36" name="%4" offset="3345" path="%7"/>
+   <linked-el length="26" name="%4" offset="538" path="%8"/>
+   <linked-el length="34" name="%4" offset="656" path="%7"/>
+   <linked-el length="35" name="%4" offset="402" path="%5"/>
+   <linked-el length="40" name="%4" offset="1500" path="%7"/>
+   <linked-el length="33" name="%4" offset="2459" path="%7"/>
+   <linked-el length="30" name="%4" offset="241" path="%9"/>
+   <linked-el length="39" name="%4" offset="922" path="%7"/>
+   <linked-el length="42" name="%4" offset="273" path="%8"/>
+   <linked-el length="30" name="%4" offset="297" path="%10"/>
+   <linked-el length="40" name="%4" offset="309" path="%6"/>
+   <linked-el length="37" name="%4" offset="2788" path="%7"/>
+   <linked-el length="31" name="%4" offset="3054" path="%7"/>
+   <linked-el length="22" name="%4" offset="358" path="%9"/>
+   <linked-el length="40" name="%4" offset="1719" path="%6"/>
+   <linked-el length="23" name="%4" offset="484" path="%10"/>
+   <linked-el length="25" name="%4" offset="3175" path="%7"/>
+   <linked-el length="39" name="%4" offset="1074" path="%7"/>
+   <linked-el length="27" name="%4" offset="561" path="%11"/>
+   <linked-el length="27" name="%4" offset="277" path="%9"/>
+   <linked-el length="39" name="%4" offset="1485" path="%6"/>
+   <linked-el length="35" name="%4" offset="1788" path="%7"/>
+   <linked-el length="43" name="%4" offset="3004" path="%7"/>
+   <linked-el length="41" name="%4" offset="273" path="%12"/>
+   <linked-el length="32" name="%4" offset="471" path="%13"/>
+   <linked-el length="25" name="%4" offset="281" path="%5"/>
+   <linked-el length="25" name="%4" offset="723" path="%10"/>
+   <linked-el length="24" name="%4" offset="539" path="%13"/>
+   <linked-el length="12" name="%4" offset="795" path="%13"/>
+   <linked-el length="29" name="%4" offset="311" path="%7"/>
+   <linked-el length="31" name="%4" offset="2246" path="%7"/>
+   <linked-el length="32" name="%4" offset="2566" path="%7"/>
+   <linked-el length="25" name="%4" offset="602" path="%12"/>
+   <linked-el length="34" name="%4" offset="514" path="%7"/>
+   <linked-el length="40" name="%4" offset="1346" path="%7"/>
+   <linked-el length="29" name="%4" offset="293" path="%13"/>
+   <linked-el length="23" name="%4" offset="971" path="%10"/>
+   <linked-el length="12" name="%14" offset="795" path="%13"/>
+   <linked-el length="66" name="%15" offset="353" path="%10"/>
+   <linked-el length="46" name="%15" offset="611" path="%10"/>
+   <linked-el length="44" name="%15" offset="873" path="%10"/>
+   <linked-el length="26" name="%16" offset="388" path="%8"/>
+   <linked-el length="30" name="%16" offset="667" path="%6"/>
+   <linked-el length="25" name="%16" offset="1403" path="%6"/>
+   <linked-el length="25" name="%16" offset="2284" path="%7"/>
+   <linked-el length="46" name="%16" offset="1448" path="%7"/>
+   <linked-el length="25" name="%16" offset="453" path="%12"/>
+   <linked-el length="43" name="%16" offset="1251" path="%6"/>
+   <linked-el length="26" name="%16" offset="1636" path="%6"/>
+   <linked-el length="40" name="%16" offset="2642" path="%7"/>
+   <linked-el length="26" name="%16" offset="1568" path="%6"/>
+   <linked-el length="27" name="%16" offset="1218" path="%6"/>
+   <linked-el length="27" name="%16" offset="1803" path="%6"/>
+   <linked-el length="41" name="%16" offset="1885" path="%7"/>
+   <linked-el length="21" name="%16" offset="2029" path="%6"/>
+   <linked-el length="26" name="%16" offset="3269" path="%7"/>
+   <linked-el length="19" name="%16" offset="981" path="%6"/>
+   <linked-el length="32" name="%16" offset="377" path="%12"/>
+   <linked-el length="19" name="%16" offset="1327" path="%6"/>
+   <linked-el length="40" name="%16" offset="610" path="%7"/>
+   <linked-el length="21" name="%16" offset="1872" path="%6"/>
+   <linked-el length="20" name="%16" offset="1042" path="%6"/>
+   <linked-el length="45" name="%16" offset="1023" path="%7"/>
+   <linked-el length="37" name="%16" offset="2399" path="%7"/>
+   <linked-el length="66" name="%17" offset="353" path="%10"/>
+   <linked-el length="46" name="%17" offset="611" path="%10"/>
+   <linked-el length="44" name="%17" offset="873" path="%10"/>
+   <linked-el length="14" name="%18" offset="376" path="%7"/>
+   <linked-el length="25" name="%19" offset="1403" path="%6"/>
+   <linked-el length="46" name="%19" offset="1448" path="%7"/>
+   <linked-el length="43" name="%19" offset="1251" path="%6"/>
+   <linked-el length="26" name="%19" offset="1636" path="%6"/>
+   <linked-el length="40" name="%19" offset="2642" path="%7"/>
+   <linked-el length="26" name="%19" offset="1568" path="%6"/>
+   <linked-el length="27" name="%19" offset="1218" path="%6"/>
+   <linked-el length="27" name="%19" offset="1803" path="%6"/>
+   <linked-el length="41" name="%19" offset="1885" path="%7"/>
+   <linked-el length="21" name="%19" offset="2029" path="%6"/>
+   <linked-el length="19" name="%19" offset="981" path="%6"/>
+   <linked-el length="19" name="%19" offset="1327" path="%6"/>
+   <linked-el length="40" name="%19" offset="610" path="%7"/>
+   <linked-el length="21" name="%19" offset="1872" path="%6"/>
+   <linked-el length="20" name="%19" offset="1042" path="%6"/>
+   <linked-el length="45" name="%19" offset="1023" path="%7"/>
+   <linked-el length="13" name="%20" offset="752" path="%13"/>
+   <linked-el length="26" name="%21" offset="388" path="%8"/>
+   <linked-el length="30" name="%21" offset="667" path="%6"/>
+   <linked-el length="41" name="%21" offset="1885" path="%7"/>
+   <linked-el length="25" name="%21" offset="2284" path="%7"/>
+   <linked-el length="46" name="%21" offset="1448" path="%7"/>
+   <linked-el length="25" name="%21" offset="453" path="%12"/>
+   <linked-el length="26" name="%21" offset="3269" path="%7"/>
+   <linked-el length="32" name="%21" offset="377" path="%12"/>
+   <linked-el length="40" name="%21" offset="610" path="%7"/>
+   <linked-el length="40" name="%21" offset="2642" path="%7"/>
+   <linked-el length="45" name="%21" offset="1023" path="%7"/>
+   <linked-el length="37" name="%21" offset="2399" path="%7"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="msg" value="%4"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/menu.xhtml" value="%10"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/listaMercadorias.xhtml" value="%6"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/layout/template.xhtml" value="%11"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/sobre.xhtml" value="%13"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/incluirMercadoria.xhtml" value="%8"/>
+  <alias
+   path="/prime-ejb-crud/src/main/java/br/com/yaw/prime/model/Mercadoria.java" value="%19"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/WEB-INF/faces-config.xml" value="%0"/>
+  <alias path="java.util.ArrayList" value="%1"/>
+  <alias path="\prime-ejb-crud\src\main\webapp\listaMercadorias.xhtml" value="%3"/>
+  <alias
+   path="/prime-ejb-crud/src/main/java/br/com/yaw/prime/mb/MercadoriaMB.java" value="%21"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/layout/footer.xhtml" value="%5"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/editarMercadoria.xhtml" value="%12"/>
+  <alias path="p" value="%14"/>
+  <alias path="param" value="%15"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/formMercadoria.xhtml" value="%7"/>
+  <alias path="mercadoriaMB" value="%16"/>
+  <alias path="param.active" value="%17"/>
+  <alias path="subtitle" value="%18"/>
+  <alias path="/prime-ejb-crud/src/main/webapp/layout/header.xhtml" value="%9"/>
+  <alias path="sobreMB" value="%20"/>
+  <alias path="/listaMercadorias.xhtml" value="%2"/>
+ </aliases>
+ <includes>
+  <page path="%12">
+   <include path="%11">
+    <var len="8" name="subtitle" off="586" value="#{msg['label.editar']}"/>
+   </include>
+   <include path="%7">
+    <var len="8" name="subtitle" off="586" value="#{msg['label.editar']}"/>
+   </include>
+  </page>
+  <page path="%8">
+   <include path="%11">
+    <var len="8" name="subtitle" off="522" value="#{msg['label.incluir']}"/>
+   </include>
+   <include path="%7">
+    <var len="8" name="subtitle" off="522" value="#{msg['label.incluir']}"/>
+   </include>
+  </page>
+ </includes>
+ <uris>
+  <uri value="http://java.sun.com/jsf/facelets">
+   <prefix>ui</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+  <uri value="http://primefaces.org/ui">
+   <prefix>p</prefix>
+  </uri>
+ </uris>
+</kb-project>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1438438492246_1" label="Maven" name="Maven">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simonini" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1438541734456_2" label="crm" name="crm"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1438429458098_0" label="Window Working Set" name="Aggregate for window 1438429458097"/>
+</workingSetManager>

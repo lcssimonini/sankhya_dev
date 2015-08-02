@@ -1,0 +1,16 @@
+package br.com.simonini;
+
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class HelloWorldBean
+ */
+@Stateless(mappedName = "helloWorldBean")
+public class HelloWorldBean implements HelloWorldBeanLocal {
+    
+    @Override
+    public String sayHello(){
+        return "Hello World!";
+    }
+
+}

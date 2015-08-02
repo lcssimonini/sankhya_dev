@@ -1,0 +1,9 @@
+package br.com.simonini.managedbeans;
+
+import java.io.Serializable;
+
+public class HelloWorldMB implements Serializable {
+
+	private static final long serialVersionUID = -4208551859438263878L;
+
+}

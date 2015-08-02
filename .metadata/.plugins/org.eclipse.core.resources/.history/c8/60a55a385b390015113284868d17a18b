@@ -1,0 +1,17 @@
+package br.com.simonini.models;
+
+import javax.ejb.Stateless;
+
+import br.com.simonini.interfaces.ContatoLocal;
+
+@Stateless(mappedName = "contatoBean")
+public class Contato implements ContatoLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public Contato() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

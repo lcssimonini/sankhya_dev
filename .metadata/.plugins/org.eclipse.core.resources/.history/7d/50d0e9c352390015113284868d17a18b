@@ -1,0 +1,20 @@
+package br.com.simonini.entity;
+
+import javax.ejb.Stateless;
+
+import br.com.simonini.interfaces.ContatoLocal;
+
+/**
+ * Session Bean implementation class Contato
+ */
+@Stateless
+public class Contato implements ContatoLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public Contato() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

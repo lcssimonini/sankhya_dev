@@ -1,0 +1,14 @@
+package br.com.simonini.models;
+
+import br.com.simonini.interfaces.ContatoLocal;
+
+public class Contato implements ContatoLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public Contato() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

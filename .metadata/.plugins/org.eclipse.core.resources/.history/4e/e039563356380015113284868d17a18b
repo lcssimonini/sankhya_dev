@@ -1,0 +1,29 @@
+package br.com.simonini.managedbeans;
+
+import java.io.Serializable;
+
+import javax.ejb.EJB;
+
+import br.com.simonini.HelloWorldBeanLocal;
+
+@javax.faces.bean.ManagedBean(name = "helloWorldMB")
+@ViewScoped
+public class HelloWorldMB implements Serializable {
+
+	private static final long serialVersionUID = -4208551859438263878L;
+	
+	@EJB
+	private HelloWorldBeanLocal helloWorldBean;
+ 
+	public String greeting;
+ 
+	public String getGreeting() {
+		this.greeting = helloWorldBean.sayHello();
+		return greeting;
+	}
+ 
+	public void setGreeting(String greeting) {
+		this.greeting = greeting;
+	}
+
+}

@@ -1,0 +1,14 @@
+package br.com.simonini.models;
+
+import br.com.simonini.interfaces.ClienteLocal;
+
+public class Cliente {
+
+    /**
+     * Default constructor. 
+     */
+    public Cliente() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

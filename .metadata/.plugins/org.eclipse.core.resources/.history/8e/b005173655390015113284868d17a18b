@@ -1,0 +1,17 @@
+package br.com.simonini.entity;
+
+import javax.ejb.Stateless;
+
+import br.com.simonini.interfaces.ClienteLocal;
+
+@Stateless(mappedName = "clienteBean")
+public class Cliente implements ClienteLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public Cliente() {
+        // TODO Auto-generated constructor stub
+    }
+
+}
