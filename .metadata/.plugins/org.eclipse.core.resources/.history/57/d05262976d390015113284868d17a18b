@@ -1,0 +1,12 @@
+package br.com.simonini.utils;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+public class GenericDao<T, PK> {
+	
+	private final EntityManager entityManager;
+	private final EntityManagerFactory factory;
+	
+	private Class<?> clazz;
+}

@@ -2,3 +2,6 @@
 1438546309561	Move compilation unit
 1438547384757	Rename package 'br.com.simonini.entity'
 1438553355910	Encapsulate field 'codigo'
+1438557403841	Rename package 'br.com.simonini.models'
+1438557412009	Delete element
+1438565319961	Rename field 'pk'

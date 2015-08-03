@@ -1,0 +1,14 @@
+package br.com.simonini.managedbeans;
+
+import java.io.Serializable;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
+@ManagedBean(name = "clienteMB")
+@ViewScoped
+public class ClienteMB implements Serializable{
+
+	private static final long serialVersionUID = -8498185949884249551L;
+
+}

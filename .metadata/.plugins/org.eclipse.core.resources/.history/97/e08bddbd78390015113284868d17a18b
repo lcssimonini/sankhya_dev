@@ -1,0 +1,6 @@
+package br.com.simonini.daos;
+
+
+public class ContatoDao GenericDao<Contato, Long> {
+
+}

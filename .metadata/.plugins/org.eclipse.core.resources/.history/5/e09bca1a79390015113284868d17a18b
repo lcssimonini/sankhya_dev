@@ -1,0 +1,25 @@
+package br.com.simonini.utils;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public final class DaoFactory {
+
+	private DaoFactory() { }
+
+	///////////////////////////////////////////////////////////////////
+	// ENTITY MANAGER FACTORY
+	///////////////////////////////////////////////////////////////////
+
+	private static final String PERSISTENCE_UNIT_NAME = "crmPersistenceUnit";
+
+	private static EntityManagerFactory entityManagerFactoryInstance;
+
+	public static EntityManagerFactory entityManagerFactorInstance() {
+		if (entityManagerFactoryInstance == null) {
+			entityManagerFactoryInstance = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		}
+
+		return entityManagerFactoryInstance;
+	}
+}

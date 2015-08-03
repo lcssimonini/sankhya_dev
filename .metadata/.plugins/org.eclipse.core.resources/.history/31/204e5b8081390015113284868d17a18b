@@ -1,0 +1,13 @@
+package br.com.simonini.session;
+
+import javax.ejb.Stateless;
+
+@Stateless
+public class ClienteBean implements ClienteBeanLocal {
+
+    public ClienteBean() {
+    }
+    
+    
+
+}

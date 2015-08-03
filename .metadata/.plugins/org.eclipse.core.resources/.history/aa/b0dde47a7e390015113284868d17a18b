@@ -1,0 +1,5 @@
+package br.com.simonini.keys;
+
+public class ContatoClientePK {
+
+}

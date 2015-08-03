@@ -1,0 +1,5 @@
+package br.com.simonini.daos;
+
+public class ClienteDao {
+
+}
