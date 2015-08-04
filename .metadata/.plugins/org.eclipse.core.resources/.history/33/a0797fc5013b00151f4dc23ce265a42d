@@ -1,0 +1,88 @@
+package br.com.simonini.managedbeans;
+
+import java.util.List;
+
+import javax.ejb.EJB;
+
+import br.com.simonini.entities.Contato;
+import br.com.simonini.session.ContatoBean;
+import br.com.simonini.utils.ScreenUtils;
+
+public class ContatoMB {
+	@EJB
+	private ContatoBean contatoBean;
+	
+	private Long idSelecionado;
+	
+	private List<Contato> contatos;
+	
+	private Contato contato;
+	
+	public String greeting;
+	
+	public ContatoMB(){
+	}
+	
+	public void setIdSelecionado(Long idSelecionado) {
+		this.idSelecionado = idSelecionado;
+	}
+	
+	public Long getIdSelecionado() {
+		return idSelecionado;
+	}
+	
+	public Contato getMercadoria() {
+		return contato;
+	}
+	
+	public void incluir(){
+		contato = new Contato();
+		//log.debug("Pronto pra incluir");
+	}
+	
+	public void editar() {
+		if (idSelecionado == null) {
+			return;
+		}
+		contato = contatoBean.findById(idSelecionado);
+		//log.debug("Pronto pra editar");
+	}
+	
+	public List<Contato> getMercadorias() {
+		if (contatos == null) {
+			contatos = contatoBean.findAll();
+		}
+		return contatos;
+	}
+
+	
+	public String salvar() {
+		try {
+			contatoBean.save(contato);
+		} catch(Exception ex) {
+			//log.error("Erro ao salvar mercadoria.", ex);
+			ScreenUtils.addMessage(ScreenUtils.getMessageFromI18N("msg.erro.salvar.mercadoria"), ex.getMessage());
+			return "";
+		}
+		//log.debug("Salvour mercadoria "+mercadoria.getId());
+		return "listaMercadorias";
+	}
+	
+	public String remover() {
+		try {
+			contatoBean.delete(contato);
+		} catch(Exception ex) {
+			//log.error("Erro ao remover mercadoria.", ex);
+			ScreenUtils.addMessage(ScreenUtils.getMessageFromI18N("msg.erro.remover.mercadoria"), ex.getMessage());
+			return "";
+		}
+		//log.debug("Removeu mercadoria "+mercadoria.getId());
+		return "listaClientes";
+	}
+	
+	public String getGreeting(){
+		this.greeting = contatoBean.getGreeting();
+		return greeting;
+	}
+
+}

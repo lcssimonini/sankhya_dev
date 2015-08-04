@@ -190,6 +190,7 @@
   <path value="C:/Users/lcssimonini/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"/>
   <path value="C:/Users/lcssimonini/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
   <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/ejb3/main/jboss-ejb3-ext-api-2.0.0.jar"/>
+  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/el/jboss-el-api_2.2_spec/1.0.0.Final/jboss-el-api_2.2_spec-1.0.0.Final.jar"/>
   <path value="/prime-ejb-crud/src/main/webapp/WEB-INF/faces-config.xml">
    <libraries>
     <library class="faces-config">
@@ -198,7 +199,6 @@
     </library>
    </libraries>
   </path>
-  <path value="C:/Users/lcssimonini/.m2/repository/org/jboss/spec/javax/el/jboss-el-api_2.2_spec/1.0.0.Final/jboss-el-api_2.2_spec-1.0.0.Final.jar"/>
   <path value="C:/Users/lcssimonini/.m2/repository/javax/jws/jsr181-api/1.0-MR1/jsr181-api-1.0-MR1.jar"/>
   <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/org/jboss/as/controller-client/main/jboss-as-controller-client-7.1.1.Final.jar"/>
   <path value="C:/Users/lcssimonini/jboss-as-7.1.1.Final/modules/javax/xml/rpc/api/main/jboss-jaxrpc-api_1.1_spec-1.0.0.Final.jar"/>

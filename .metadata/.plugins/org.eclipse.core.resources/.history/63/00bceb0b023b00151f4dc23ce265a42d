@@ -1,0 +1,84 @@
+package br.com.simonini.managedbeans;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.ejb.EJB;
+
+import br.com.simonini.entities.Contato;
+import br.com.simonini.keys.ContatoClientePK;
+import br.com.simonini.session.ContatoBean;
+import br.com.simonini.utils.ScreenUtils;
+
+public class ContatoMB implements Serializable {
+	@EJB
+	private ContatoBean contatoBean;
+	
+	private ContatoClientePK idSelecionado;
+	
+	private List<Contato> contatos;
+	
+	private Contato contato;
+	
+	public String greeting;
+	
+	public ContatoMB(){
+	}
+	
+	public void setIdSelecionado(ContatoClientePK idSelecionado) {
+		this.idSelecionado = idSelecionado;
+	}
+	
+	public ContatoClientePK getIdSelecionado() {
+		return idSelecionado;
+	}
+	
+	public Contato getContato() {
+		return contato;
+	}
+	
+	public void incluir(){
+		contato = new Contato();
+	}
+	
+	public void editar() {
+		if (idSelecionado == null) {
+			return;
+		}
+		contato = contatoBean.findById(idSelecionado);
+	}
+	
+	public List<Contato> getContatos() {
+		if (contatos == null) {
+			contatos = contatoBean.findAll();
+		}
+		return contatos;
+	}
+
+	
+	public String salvar() {
+		try {
+			contatoBean.save(contato);
+		} catch(Exception ex) {
+			ScreenUtils.addMessage(ScreenUtils.getMessageFromI18N("msg.erro.salvar.mercadoria"), ex.getMessage());
+			return "";
+		}
+		return "listaMercadorias";
+	}
+	
+	public String remover() {
+		try {
+			contatoBean.delete(contato);
+		} catch(Exception ex) {
+			ScreenUtils.addMessage(ScreenUtils.getMessageFromI18N("msg.erro.remover.mercadoria"), ex.getMessage());
+			return "";
+		}
+		return "listaContatos";
+	}
+	
+	public String getGreeting(){
+		this.greeting = contatoBean.getGreeting();
+		return greeting;
+	}
+
+}

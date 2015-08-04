@@ -376,3 +376,6 @@
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-08-04 08:50:57.385
 !MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2015-08-04 19:54:08.019
+!MESSAGE The server was shutdown forcefully. All processes were terminated.

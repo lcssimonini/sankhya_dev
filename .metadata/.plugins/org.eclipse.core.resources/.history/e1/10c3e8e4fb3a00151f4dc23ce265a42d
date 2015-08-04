@@ -1,0 +1,34 @@
+package br.com.simonini.session;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import br.com.simonini.daos.ClienteDao;
+import br.com.simonini.entities.Cliente;
+import br.com.yaw.prime.model.Mercadoria;
+
+@Stateless(mappedName = "clienteBean")
+@LocalBean
+public class ClienteBean extends ClienteDao {
+
+    public ClienteBean() {
+    }
+    
+    public String getGreeting(){
+    	return Cliente.getGreeting();
+    }
+    
+	/**
+	 * O container injeta a referência para o <code>EntityManager</code>.
+	 */
+	@PersistenceContext
+	private EntityManager em;
+	
+	@Override
+	protected EntityManager getEntityManager() {
+		return em;
+	}
+
+}

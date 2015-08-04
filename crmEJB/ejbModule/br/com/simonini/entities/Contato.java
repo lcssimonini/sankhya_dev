@@ -60,6 +60,10 @@ public class Contato implements Serializable{
 		this.departamento = departamento;
 	}
     
+    public static String getGreeting(){
+    	return "Bom dia Contato";
+    }
+    
 	public ContatoClientePK getId() {
     	return this.id;
     }
