@@ -151,7 +151,4 @@ public class Contato implements Serializable{
 			return false;
 		return true;
 	}
-    
-    
-
 }

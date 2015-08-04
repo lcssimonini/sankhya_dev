@@ -22,7 +22,7 @@ public class Cliente implements Serializable{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@OneToMany(fetch=FetchType.EAGER,mappedBy="matriz", orphanRemoval=true)
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="cliente", orphanRemoval=true)
 	private Set<Contato> contatos;
 	
 	private String nome;

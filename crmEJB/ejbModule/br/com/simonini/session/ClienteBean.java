@@ -1,11 +1,13 @@
 package br.com.simonini.session;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 import br.com.simonini.entities.Cliente;
 
 @Stateless(mappedName = "clienteBean")
-public class ClienteBean implements ClienteBeanLocal {
+@LocalBean
+public class ClienteBean {
 
     public ClienteBean() {
     }
