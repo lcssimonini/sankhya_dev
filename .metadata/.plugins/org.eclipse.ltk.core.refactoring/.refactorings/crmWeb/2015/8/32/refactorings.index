@@ -3,3 +3,6 @@
 1438731396386	Rename field 'cliente'
 1438731831865	Rename resource 'messages_labels.properties'
 1438733112868	Move 2 resources to 'resources'
+1438776671803	Rename resource 'formMercadoria.xhtml'
+1438777744786	Rename resource 'incluirMercadoria.xhtml'
+1438777771945	Rename resource 'editarMercadoria.xhtml'

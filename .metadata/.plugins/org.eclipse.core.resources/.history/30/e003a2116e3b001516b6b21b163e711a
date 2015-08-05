@@ -1,0 +1,115 @@
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:form styleClass="form-horizontal">
+		<fieldset>
+			<legend>
+				<h3>
+					<h:outputText value="Cadastro de cliente" />
+					<small> <h:outputText value="#{subtitle}" /></small>
+				</h3>
+			</legend>
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Nome:" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.nome}"
+						label="Nome" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Endereço" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.endereco}"
+						label="Endereço" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="5" maximum="60" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Número" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.numero}"
+						label="Número" required="true"
+						styleClass="input-small">
+						<f:validateLength minimum="0" maximum="4" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Telefone" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.telefone}"
+						label="Telefone" required="true"
+						styleClass="input-medium">
+						<f:validateLength minimum="0" maximum="4" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Tipo" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.tipo}"
+						label="Tipo" required="true"
+						styleClass="input-medium">
+						<f:validateLength minimum="0" maximum="4" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Documento" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.documento}"
+						label="Documento" required="true"
+						styleClass="input-medium">
+						<f:validateLength minimum="0" maximum="4" />
+					</h:inputText>
+				</div>
+			</div>
+		</fieldset>
+
+		<div class="control-group">
+			<div class="controls">
+				<p:commandButton value="Salvar"
+					action="#{clienteMB.salvar}" styleClass="btn btn-success" onclick="dlg.show();" oncomplete="dlg.hide();"
+					rendered="#{clienteMB.cliente != null}" />
+				<p:button value="Cancelar"
+					outcome="listaClientes" styleClass="btn" />
+				<p:commandButton value="Excluir"
+					onclick="confirmation.show()"
+					rendered="#{clienteMB.cliente.id != null}" immediate="true"
+					styleClass="btn btn-danger" />
+			</div>
+		</div>
+		
+		<p:dialog id="dialog" header="Processando" widgetVar="dlg" dynamic="true" modal="true">  
+	    	<h:outputText value="Aguarde, processando requisição" />
+		</p:dialog>
+		
+		<p:confirmDialog id="confirmDialog" message="Confirmar exclusão de cliente"
+			header="Excluir cliente" severity="alert" widgetVar="confirmation">  
+	        <p:commandButton id="confirm" value="Sim" update="messages" 
+	        	oncomplete="confirmation.hide()" action="#{clienteMB.remover}" />  
+	        <p:commandButton id="decline" value="Não" 
+	        	onclick="confirmation.hide()" type="button" />
+	    </p:confirmDialog>
+	
+		<p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
+	</h:form>
+</ui:fragment>

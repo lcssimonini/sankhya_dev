@@ -2529,3 +2529,6 @@ java.lang.NullPointerException
 
 !ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-05 09:01:47.987
 !MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2015-08-05 09:48:03.635
+!MESSAGE The server was shutdown forcefully. All processes were terminated.

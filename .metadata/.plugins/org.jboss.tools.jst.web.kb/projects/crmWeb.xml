@@ -150,16 +150,179 @@
   <core validator-id="jboss.cdi.core"/>
   <core validator-id="jboss.jsf.core"/>
   <el>
-   <linked-el length="23" name="%0" offset="467" path="%1"/>
-   <linked-el length="23" name="%2" offset="467" path="%1"/>
+   <linked-el length="25" name="%0" offset="599" path="%1"/>
+   <linked-el length="34" name="%0" offset="656" path="%2"/>
+   <linked-el length="38" name="%0" offset="2898" path="%2"/>
+   <linked-el length="36" name="%0" offset="3345" path="%2"/>
+   <linked-el length="40" name="%0" offset="1500" path="%2"/>
+   <linked-el length="33" name="%0" offset="2459" path="%2"/>
+   <linked-el length="41" name="%0" offset="273" path="%1"/>
+   <linked-el length="39" name="%0" offset="922" path="%2"/>
+   <linked-el length="31" name="%0" offset="2246" path="%2"/>
+   <linked-el length="32" name="%0" offset="2566" path="%2"/>
+   <linked-el length="34" name="%0" offset="514" path="%2"/>
+   <linked-el length="40" name="%0" offset="1346" path="%2"/>
+   <linked-el length="35" name="%0" offset="1932" path="%2"/>
+   <linked-el length="39" name="%0" offset="1074" path="%2"/>
+   <linked-el length="35" name="%0" offset="1788" path="%2"/>
+   <linked-el length="43" name="%0" offset="3004" path="%2"/>
+   <linked-el length="29" name="%0" offset="311" path="%2"/>
+   <linked-el length="25" name="%0" offset="599" path="%3"/>
+   <linked-el length="37" name="%0" offset="2788" path="%2"/>
+   <linked-el length="41" name="%0" offset="273" path="%3"/>
+   <linked-el length="31" name="%0" offset="3054" path="%2"/>
+   <linked-el length="25" name="%0" offset="3175" path="%2"/>
+   <linked-el length="34" name="%4" offset="5195" path="%5"/>
+   <linked-el length="38" name="%4" offset="942" path="%5"/>
+   <linked-el length="39" name="%4" offset="2375" path="%5"/>
+   <linked-el length="43" name="%4" offset="4167" path="%5"/>
+   <linked-el length="34" name="%4" offset="584" path="%5"/>
+   <linked-el length="42" name="%4" offset="4552" path="%5"/>
+   <linked-el length="22" name="%4" offset="4883" path="%5"/>
+   <linked-el length="23" name="%4" offset="5747" path="%5"/>
+   <linked-el length="24" name="%4" offset="632" path="%6"/>
+   <linked-el length="36" name="%4" offset="2738" path="%5"/>
+   <linked-el length="23" name="%4" offset="467" path="%7"/>
+   <linked-el length="38" name="%4" offset="1661" path="%5"/>
+   <linked-el length="36" name="%4" offset="1303" path="%5"/>
+   <linked-el length="36" name="%4" offset="3095" path="%5"/>
+   <linked-el length="35" name="%4" offset="3447" path="%5"/>
+   <linked-el length="23" name="%4" offset="364" path="%8"/>
+   <linked-el length="35" name="%4" offset="3801" path="%5"/>
+   <linked-el length="34" name="%4" offset="2019" path="%5"/>
+   <linked-el length="31" name="%4" offset="4995" path="%5"/>
+   <linked-el length="46" name="%9" offset="1448" path="%2"/>
+   <linked-el length="32" name="%10" offset="377" path="%1"/>
+   <linked-el length="32" name="%10" offset="377" path="%3"/>
+   <linked-el length="25" name="%11" offset="453" path="%3"/>
+   <linked-el length="25" name="%11" offset="453" path="%1"/>
+   <linked-el length="40" name="%12" offset="610" path="%2"/>
+   <linked-el length="41" name="%13" offset="1885" path="%2"/>
+   <linked-el length="45" name="%14" offset="1023" path="%2"/>
+   <linked-el length="26" name="%15" offset="3269" path="%2"/>
+   <linked-el length="24" name="%16" offset="1185" path="%6"/>
+   <linked-el length="38" name="%16" offset="942" path="%5"/>
+   <linked-el length="23" name="%16" offset="364" path="%17"/>
+   <linked-el length="23" name="%16" offset="5747" path="%5"/>
+   <linked-el length="16" name="%16" offset="1243" path="%6"/>
+   <linked-el length="36" name="%16" offset="2738" path="%5"/>
+   <linked-el length="16" name="%16" offset="946" path="%6"/>
+   <linked-el length="38" name="%16" offset="1661" path="%5"/>
+   <linked-el length="17" name="%16" offset="1007" path="%6"/>
+   <linked-el length="35" name="%16" offset="3447" path="%5"/>
+   <linked-el length="23" name="%16" offset="364" path="%8"/>
+   <linked-el length="23" name="%16" offset="1459" path="%6"/>
+   <linked-el length="31" name="%16" offset="4995" path="%5"/>
+   <linked-el length="22" name="%16" offset="1320" path="%6"/>
+   <linked-el length="25" name="%16" offset="1154" path="%6"/>
+   <linked-el length="34" name="%16" offset="5195" path="%5"/>
+   <linked-el length="39" name="%16" offset="2375" path="%5"/>
+   <linked-el length="43" name="%16" offset="4167" path="%5"/>
+   <linked-el length="34" name="%16" offset="584" path="%5"/>
+   <linked-el length="42" name="%16" offset="4552" path="%5"/>
+   <linked-el length="22" name="%16" offset="4883" path="%5"/>
+   <linked-el length="24" name="%16" offset="632" path="%6"/>
+   <linked-el length="23" name="%16" offset="467" path="%7"/>
+   <linked-el length="36" name="%16" offset="1303" path="%5"/>
+   <linked-el length="36" name="%16" offset="3095" path="%5"/>
+   <linked-el length="35" name="%16" offset="3801" path="%5"/>
+   <linked-el length="34" name="%16" offset="2019" path="%5"/>
+   <linked-el length="40" name="%18" offset="2642" path="%2"/>
+   <linked-el length="66" name="%19" offset="280" path="%20"/>
+   <linked-el length="46" name="%19" offset="550" path="%20"/>
+   <linked-el length="14" name="%21" offset="376" path="%2"/>
+   <linked-el length="14" name="%21" offset="369" path="%5"/>
+   <linked-el length="25" name="%22" offset="453" path="%3"/>
+   <linked-el length="32" name="%22" offset="377" path="%1"/>
+   <linked-el length="40" name="%22" offset="2642" path="%2"/>
+   <linked-el length="41" name="%22" offset="1885" path="%2"/>
+   <linked-el length="32" name="%22" offset="377" path="%3"/>
+   <linked-el length="26" name="%22" offset="3269" path="%2"/>
+   <linked-el length="45" name="%22" offset="1023" path="%2"/>
+   <linked-el length="37" name="%22" offset="2399" path="%2"/>
+   <linked-el length="40" name="%22" offset="610" path="%2"/>
+   <linked-el length="25" name="%22" offset="2284" path="%2"/>
+   <linked-el length="46" name="%22" offset="1448" path="%2"/>
+   <linked-el length="25" name="%22" offset="453" path="%1"/>
+   <linked-el length="66" name="%23" offset="280" path="%20"/>
+   <linked-el length="46" name="%23" offset="550" path="%20"/>
+   <linked-el length="45" name="%24" offset="1023" path="%2"/>
+   <linked-el length="37" name="%24" offset="2399" path="%2"/>
+   <linked-el length="40" name="%24" offset="610" path="%2"/>
+   <linked-el length="40" name="%24" offset="2642" path="%2"/>
+   <linked-el length="41" name="%24" offset="1885" path="%2"/>
+   <linked-el length="46" name="%24" offset="1448" path="%2"/>
+   <linked-el length="25" name="%25" offset="2284" path="%2"/>
+   <linked-el length="25" name="%26" offset="1154" path="%6"/>
+   <linked-el length="34" name="%26" offset="5195" path="%5"/>
+   <linked-el length="24" name="%26" offset="1185" path="%6"/>
+   <linked-el length="38" name="%26" offset="942" path="%5"/>
+   <linked-el length="39" name="%26" offset="2375" path="%5"/>
+   <linked-el length="43" name="%26" offset="4167" path="%5"/>
+   <linked-el length="34" name="%26" offset="584" path="%5"/>
+   <linked-el length="42" name="%26" offset="4552" path="%5"/>
+   <linked-el length="16" name="%26" offset="1243" path="%6"/>
+   <linked-el length="36" name="%26" offset="2738" path="%5"/>
+   <linked-el length="16" name="%26" offset="946" path="%6"/>
+   <linked-el length="38" name="%26" offset="1661" path="%5"/>
+   <linked-el length="17" name="%26" offset="1007" path="%6"/>
+   <linked-el length="36" name="%26" offset="1303" path="%5"/>
+   <linked-el length="36" name="%26" offset="3095" path="%5"/>
+   <linked-el length="35" name="%26" offset="3447" path="%5"/>
+   <linked-el length="35" name="%26" offset="3801" path="%5"/>
+   <linked-el length="23" name="%26" offset="1459" path="%6"/>
+   <linked-el length="34" name="%26" offset="2019" path="%5"/>
+   <linked-el length="22" name="%26" offset="1320" path="%6"/>
   </el>
  </validation>
  <aliases>
-  <alias path="/crmWeb/src/br/com/simonini/managedbeans/ClienteMB.java" value="%0"/>
-  <alias path="/crmWeb/WebContent/index.xhtml" value="%1"/>
-  <alias path="clienteMB" value="%2"/>
+  <alias path="msg" value="%0"/>
+  <alias path="/crmWeb/src/br/com/simonini/managedbeans/ClienteMB.java" value="%4"/>
+  <alias path="mercadoriaMB.mercadoria.quantidade" value="%9"/>
+  <alias path="mercadoriaMB.mercadoria.nome" value="%12"/>
+  <alias path="/crmWeb/WebContent/formCliente.xhtml" value="%5"/>
+  <alias path="clienteMB" value="%16"/>
+  <alias path="/crmWeb/WebContent/editarMercadoria.xhtml" value="%3"/>
+  <alias path="param" value="%19"/>
+  <alias path="/crmWeb/WebContent/editarCliente.xhtml" value="%1"/>
+  <alias path="mercadoriaMB" value="%22"/>
+  <alias path="/crmWeb/WebContent/index.xhtml" value="%7"/>
+  <alias path="mercadoriaMB.idSelecionado" value="%10"/>
+  <alias path="/crmWeb/WebContent/listaClientes.xhtml" value="%6"/>
+  <alias path="mercadoriaMB.editar" value="%11"/>
+  <alias path="mercadoriaMB.mercadoria.preco" value="%13"/>
+  <alias path="mercadoriaMB.mercadoria.descricao" value="%14"/>
+  <alias path="mercadoriaMB.remover" value="%15"/>
+  <alias path="mercadoriaMB.mercadoria.id" value="%18"/>
+  <alias path="/crmWeb/WebContent/menu.xhtml" value="%20"/>
+  <alias path="/crmWeb/WebContent/formMercadoria.xhtml" value="%2"/>
+  <alias path="/crmWeb/WebContent/incluirMercadoria.xhtml" value="%17"/>
+  <alias path="subtitle" value="%21"/>
+  <alias path="param.active" value="%23"/>
+  <alias path="mercadoriaMB.mercadoria" value="%24"/>
+  <alias path="mercadoriaMB.salvar" value="%25"/>
+  <alias path="/crmWeb/WebContent/incluirCliente.xhtml" value="%8"/>
+  <alias path="/crmEJB/ejbModule/br/com/simonini/entities/Cliente.java" value="%26"/>
+  <alias path="/crmWeb/WebContent/layout/template.xhtml" value="%27"/>
  </aliases>
- <includes/>
+ <includes>
+  <page path="%1">
+   <include path="%27">
+    <var len="8" name="subtitle" off="583" value="#{msg['label.editar']}"/>
+   </include>
+   <include path="%5">
+    <var len="8" name="subtitle" off="583" value="#{msg['label.editar']}"/>
+   </include>
+  </page>
+  <page path="%8">
+   <include path="%27">
+    <var len="8" name="subtitle" off="492" value="#{&quot;Incluir&quot;.toString()}"/>
+   </include>
+   <include path="%5">
+    <var len="8" name="subtitle" off="492" value="#{&quot;Incluir&quot;.toString()}"/>
+   </include>
+  </page>
+ </includes>
  <uris>
   <uri value="http://java.sun.com/jsf/core">
    <prefix>f</prefix>

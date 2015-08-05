@@ -1,8 +1,11 @@
 package br.com.simonini.managedbeans;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -30,6 +33,22 @@ public class ClienteMB implements Serializable {
 	
 	public ClienteMB(){
 	}
+	
+	 private Map<Integer,String> tipo;
+	 private Map<Integer,String> porte;
+	     
+	 @PostConstruct
+	 public void init() {
+	        tipo  = new HashMap<Integer, String>();
+	        tipo.put(new Integer(1), "Física");
+	        tipo.put(new Integer(2), "Jurídica");
+	        
+	        porte  = new HashMap<Integer, String>();
+	        porte.put(new Integer(1), "Micro");
+	        porte.put(new Integer(2), "Pequeno");
+	        porte.put(new Integer(3), "Medio");
+	        porte.put(new Integer(4), "Grande");
+	 }
 	
 	public void setIdSelecionado(Long idSelecionado) {
 		this.idSelecionado = idSelecionado;
