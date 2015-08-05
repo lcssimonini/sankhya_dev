@@ -5,6 +5,8 @@ import javax.persistence.Persistence;
 
 import br.com.simonini.daos.ClienteDao;
 import br.com.simonini.daos.ContatoDao;
+import br.com.simonini.entities.Cliente;
+import br.com.simonini.entities.Contato;
 
 public final class DaoFactory {
 	
@@ -27,7 +29,7 @@ public final class DaoFactory {
 	
 	public static ClienteDao clienteInstance() {
 		if (clienteDaoInstance == null) {
-			clienteDaoInstance = new ClienteDao();
+			clienteDaoInstance = new ClienteDao(Cliente.class);
 		}
 		
 		return clienteDaoInstance;
@@ -35,7 +37,7 @@ public final class DaoFactory {
 	
 	public static ContatoDao contatoInstance() {
 		if (contatoDaoInstance == null) {
-			contatoDaoInstance = new ContatoDao();
+			contatoDaoInstance = new ContatoDao(Contato.class);
 		}
 		
 		return contatoDaoInstance;

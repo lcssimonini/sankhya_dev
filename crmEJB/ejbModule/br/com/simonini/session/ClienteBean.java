@@ -9,11 +9,19 @@ import br.com.simonini.entities.Cliente;
 @Stateless(mappedName = "clienteBean")
 @LocalBean
 public class ClienteBean extends ClienteDao {
-
-    public ClienteBean() {
-    	super();
-    }
     
+//	@PersistenceContext
+//	private EntityManager em;
+//	
+//	@Override
+//	public EntityManager getEntityManager() {
+//		return em;
+//	}
+//	
+	public ClienteBean() {
+		super(Cliente.class);
+	}
+	
     public String getGreeting(){
     	return Cliente.getGreeting();
     }

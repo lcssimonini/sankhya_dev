@@ -8,8 +8,8 @@
   <persistence-unit name="crmPersistenceUnit" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     
-    <class>br.com.simonini.Cliente</class>
-    <class>br.com.simonini.Contato</class>
+    <class>br.com.simonini.entities.Cliente</class>
+    <class>br.com.simonini.entities.Contato</class>
     <properties>
      	<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
      	

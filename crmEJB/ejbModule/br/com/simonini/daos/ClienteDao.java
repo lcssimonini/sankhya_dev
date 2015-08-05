@@ -5,4 +5,7 @@ import br.com.simonini.utils.GenericDao;
 
 public class ClienteDao extends GenericDao<Cliente, Long> {
 
+	public ClienteDao(Class<?> clazz) {
+		super(clazz);
+	}	
 }

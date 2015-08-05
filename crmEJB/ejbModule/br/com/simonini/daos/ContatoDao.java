@@ -7,4 +7,7 @@ import br.com.simonini.utils.GenericDao;
 
 public class ContatoDao extends GenericDao<Contato, ContatoClientePK> {
 
+	public ContatoDao(Class<?> clazz) {
+		super(clazz);
+	}
 }

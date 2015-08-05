@@ -15,6 +15,12 @@ public abstract class GenericDao<T, PK> {
 	private final EntityManagerFactory factory;
 
 	private Class<?> clazz;
+	
+	public GenericDao(Class<?> clazz) {
+		this.factory = DaoFactory.entityManagerFactorInstance();
+		this.entityManager = factory.createEntityManager();
+		this.clazz = clazz;
+	}
 
 	public GenericDao() {
 		this(DaoFactory.entityManagerFactorInstance());

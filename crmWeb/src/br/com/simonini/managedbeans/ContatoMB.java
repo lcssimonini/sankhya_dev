@@ -67,7 +67,7 @@ public class ContatoMB implements Serializable {
 		try {
 			contatoBean.save(contato);
 		} catch(Exception ex) {
-			ScreenUtils.addMessage(ScreenUtils.getMessageFromI18N("msg.erro.salvar.mercadoria"), ex.getMessage());
+			ScreenUtils.addMessage("Não foi possível salvar o contato", ex.getMessage());
 			return "";
 		}
 		return "listaMercadorias";
@@ -77,7 +77,7 @@ public class ContatoMB implements Serializable {
 		try {
 			contatoBean.delete(contato);
 		} catch(Exception ex) {
-			ScreenUtils.addMessage(ScreenUtils.getMessageFromI18N("msg.erro.remover.mercadoria"), ex.getMessage());
+			ScreenUtils.addMessage("Não foi possível remover o contato", ex.getMessage());
 			return "";
 		}
 		return "listaContatos";

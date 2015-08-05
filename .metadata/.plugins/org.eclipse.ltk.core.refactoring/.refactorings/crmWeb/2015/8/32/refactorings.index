@@ -1,3 +1,5 @@
 1438731382986	Rename field 'clienteBean'
 1438731390475	Rename field 'clientes'
 1438731396386	Rename field 'cliente'
+1438731831865	Rename resource 'messages_labels.properties'
+1438733112868	Move 2 resources to 'resources'
