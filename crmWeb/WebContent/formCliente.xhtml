@@ -12,6 +12,7 @@
 					<small> <h:outputText value="#{subtitle}" /></small>
 				</h3>
 			</legend>
+			
 			<div class="control-group">
 				<label class="control-label">
 					<h:outputText value="Nome:" /></label>
@@ -25,14 +26,15 @@
 					</h:inputText>
 				</div>
 			</div>
+			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Endereço" /></label>
 				<div class="controls">
 					<h:inputText value="#{clienteMB.cliente.endereco}"
-						label="Endereço" required="true"
+						label="Endereço" required="false"
 						styleClass="input-large">
-						<f:validateLength minimum="5" maximum="60" />
+						<f:validateLength minimum="0" maximum="60" />
 					</h:inputText>
 				</div>
 			</div>
@@ -42,7 +44,7 @@
 						value="Número" /></label>
 				<div class="controls">
 					<h:inputText value="#{clienteMB.cliente.numero}"
-						label="Número" required="true"
+						label="Número" required="false"
 						styleClass="input-small">
 						<f:validateLength minimum="0" maximum="4" />
 					</h:inputText>
@@ -54,7 +56,7 @@
 						value="Telefone" /></label>
 				<div class="controls">
 					<h:inputText value="#{clienteMB.cliente.telefone}"
-						label="Telefone" required="true"
+						label="Telefone" required="false"
 						styleClass="input-large">
 						<f:validateLength minimum="0" maximum="4" />
 					</h:inputText>
@@ -65,11 +67,10 @@
 				<label class="control-label"><h:outputText
 						value="Tipo" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.tipo}"
-						label="Tipo" required="true"
-						styleClass="input-medium">
-						<f:validateLength minimum="0" maximum="4" />
-					</h:inputText>
+					<p:selectOneMenu id="tipo" value="#{clienteMB.cliente.tipo}" style="width:150px">
+                		<f:selectItem itemLabel="Selecione o tipo" itemValue="" noSelectionOption="true" />
+                		<f:selectItems value="#{clienteMB.tipo}" />
+            		</p:selectOneMenu>
 				</div>
 			</div>
 			
@@ -78,9 +79,9 @@
 						value="Documento" /></label>
 				<div class="controls">
 					<h:inputText value="#{clienteMB.cliente.documento}"
-						label="Documento" required="true"
+						label="Documento" required="false"
 						styleClass="input-large">
-						<f:validateLength minimum="1" maximum="12" />
+						<f:validateLength minimum="0" maximum="12" />
 					</h:inputText>
 				</div>
 			</div>
@@ -90,9 +91,9 @@
 						value="Cidade" /></label>
 				<div class="controls">
 					<h:inputText value="#{clienteMB.cliente.cidade}"
-						label="Cidade" required="true"
+						label="Cidade" required="false"
 						styleClass="input-large">
-						<f:validateLength minimum="1" maximum="30" />
+						<f:validateLength minimum="0" maximum="30" />
 					</h:inputText>
 				</div>
 			</div>
@@ -102,9 +103,9 @@
 						value="Estado" /></label>
 				<div class="controls">
 					<h:inputText value="#{clienteMB.cliente.estado}"
-						label="Estado" required="true"
+						label="Estado" required="false"
 						styleClass="input-small">
-						<f:validateLength minimum="1" maximum="2" />
+						<f:validateLength minimum="0" maximum="2" />
 					</h:inputText>
 				</div>
 			</div>
@@ -114,22 +115,21 @@
 						value="Email" /></label>
 				<div class="controls">
 					<h:inputText value="#{clienteMB.cliente.email}"
-						label="Email" required="true"
+						label="Email" required="false"
 						styleClass="input-large">
-						<f:validateLength minimum="4" maximum="30" />
+						<f:validateLength minimum="0" maximum="30" />
 					</h:inputText>
 				</div>
 			</div>
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
-						value="Porte" /></label>
+						value="Tipo" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.porte}"
-						label="Porte" required="true"
-						styleClass="input-large">
-						<f:validateLength minimum="4" maximum="30" />
-					</h:inputText>
+					<p:selectOneMenu id="porte" value="#{clienteMB.cliente.porte}" style="width:150px">
+                		<f:selectItem itemLabel="Selecione o porte" itemValue="" noSelectionOption="true" />
+                		<f:selectItems value="#{clienteMB.porte}" />
+            		</p:selectOneMenu>
 				</div>
 			</div>
 			
@@ -138,21 +138,9 @@
 						value="Limite de crédito" /></label>
 				<div class="controls">
 					<h:inputText value="#{clienteMB.cliente.limiteCredito}"
-						label="Limite de crédito" required="true"
+						label="Limite de crédito" required="false"
 						styleClass="input-large">
-						<f:validateLength minimum="4" maximum="30" />
-					</h:inputText>
-				</div>
-			</div>
-			
-			<div class="control-group">
-				<label class="control-label"><h:outputText
-						value="Data de cadastro" /></label>
-				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.dataCadastro}"
-						label="Data de cadastro" required="true"
-						styleClass="input-large">
-						<f:validateLength minimum="4" maximum="30" />
+						<f:validateLength minimum="0" maximum="30" />
 					</h:inputText>
 				</div>
 			</div>

@@ -5,17 +5,17 @@
 
 <ui:composition template="/layout/template.xhtml">
 	<ui:define name="pageTitle">
-		<h:outputText value="#{msg['page.title.editar.mercadoria']}" />
+		<h:outputText value="E" />
 	</ui:define>
 
 	<f:metadata>
-		<f:viewParam name="id" value="#{mercadoriaMB.idSelecionado}" />
-		<f:event type="preRenderView" listener="#{mercadoriaMB.editar}" />
+		<f:viewParam name="id" value="#{clienteMB.idSelecionado}" />
+		<f:event type="preRenderView" listener="#{clienteMB.editar}" />
 	</f:metadata>
 
 	<ui:define name="content">
 		<ui:include src="formCliente.xhtml">
-			<ui:param name="subtitle" value="#{msg['label.editar']}" />
+			<ui:param name="subtitle" value="Editar" />
 		</ui:include>
 	</ui:define>
 </ui:composition>

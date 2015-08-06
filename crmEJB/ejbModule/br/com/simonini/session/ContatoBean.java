@@ -10,14 +10,6 @@ import br.com.simonini.entities.Contato;
 @LocalBean
 public class ContatoBean extends ContatoDao {
 
-//	@PersistenceContext
-//	private EntityManager em;
-//	
-//	@Override
-//	public EntityManager getEntityManager() {
-//		return em;
-//	}
-	
     public ContatoBean() {
     	super(Contato.class);
     }

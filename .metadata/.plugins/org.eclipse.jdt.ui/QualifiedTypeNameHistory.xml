@@ -5,13 +5,15 @@
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
 <fullyQualifiedTypeName name="javax.persistence.Query"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="br.com.simonini.utils.GenericDao"/>
 <fullyQualifiedTypeName name="br.com.simonini.daos.ContatoDao"/>
 <fullyQualifiedTypeName name="javax.persistence.Embeddable"/>
-<fullyQualifiedTypeName name="br.com.simonini.entities.Cliente"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ViewScoped"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="br.com.simonini.session.ClienteBean"/>
+<fullyQualifiedTypeName name="br.com.simonini.entities.Cliente"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

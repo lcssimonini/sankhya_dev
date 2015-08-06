@@ -1,6 +1,7 @@
 package br.com.simonini.managedbeans;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,24 +32,42 @@ public class ClienteMB implements Serializable {
 	
 	public String greeting;
 	
+	private Map<String, Integer> tipo;
+	private Map<String, Integer> porte;
+	
+	@PostConstruct
+	public void init() {
+//		clientes = clienteBean.createClientes();
+		
+		tipo  = new HashMap<String, Integer>();
+	    tipo.put("Física", new Integer(1));
+	    tipo.put("Jurídica", new Integer(2));
+	        
+	    porte  = new HashMap<String, Integer>();
+	    porte.put("Micro", new Integer(1));
+	    porte.put("Pequeno", new Integer(2));
+	    porte.put("Medio", new Integer(3));
+	    porte.put("Grande", new Integer(4));
+	}
+	
 	public ClienteMB(){
 	}
 	
-	 private Map<Integer,String> tipo;
-	 private Map<Integer,String> porte;
-	     
-	 @PostConstruct
-	 public void init() {
-	        tipo  = new HashMap<Integer, String>();
-	        tipo.put(new Integer(1), "Física");
-	        tipo.put(new Integer(2), "Jurídica");
-	        
-	        porte  = new HashMap<Integer, String>();
-	        porte.put(new Integer(1), "Micro");
-	        porte.put(new Integer(2), "Pequeno");
-	        porte.put(new Integer(3), "Medio");
-	        porte.put(new Integer(4), "Grande");
-	 }
+	public Map<String, Integer> getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(Map<String, Integer> tipo) {
+		this.tipo = tipo;
+	}
+
+	public Map<String, Integer> getPorte() {
+		return porte;
+	}
+
+	public void setPorte(Map<String, Integer> porte) {
+		this.porte = porte;
+	}
 	
 	public void setIdSelecionado(Long idSelecionado) {
 		this.idSelecionado = idSelecionado;

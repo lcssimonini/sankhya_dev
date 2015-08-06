@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/layout/template.xhtml">
+	<ui:define name="pageTitle">
+		<h:outputText value="Listagem de clientes" />
+	</ui:define>
+
+	<ui:define name="content">
+		<div style="border-bottom: 1px solid #E5E5E5;">
+			<h3>
+				<h:outputText value="Clientes" />
+				<small> <h:outputText value="Listagem" /></small>
+			</h3>
+		</div>
+			<p:dataTable id="dataTable" var="cliente"
+				value="#{clienteMB.clientes}" paginator="true" rows="5"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15">
+			    
+			    <p:column headerText="Id">
+			        <h:outputText value="#{cliente.id}" />
+			    </p:column>
+			 
+			    <p:column headerText="Nome">
+			        <h:outputText value="#{cliente.nome}" />
+			    </p:column>
+			 
+			    <p:column headerText="Documento">
+			        <h:outputText value="#{cliente.documento}" />
+			    </p:column>
+			</p:dataTable>
+			<br/>
+			<br/>
+
+	</ui:define>
+</ui:composition>
+</html>
