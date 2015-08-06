@@ -22,7 +22,7 @@
 						label="Nome" 
 						required="true"
 						styleClass="input-large">
-						<f:validateLength minimum="2" maximum="60" />
+						<f:validateLength minimum="5" maximum="60" />
 					</h:inputText>
 				</div>
 			</div>

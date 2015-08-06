@@ -3210,3 +3210,64 @@ java.lang.NullPointerException
 
 !ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-06 09:20:21.541
 !MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 09:40:42.487
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.jboss.tools.cdi.ui.open.namedBean
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 09:40:42.527
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 09:40:42.528
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 09:40:42.528
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 09:40:42.529
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 09:40:42.531
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.disable.grammar.constraints
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 09:40:42.532
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.eclipse.wst.xml.ui.reload.dependencies
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 09:40:42.533
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.jboss.tools.seam.ui.open.component
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 09:40:42.535
+!MESSAGE Could not retrieve EHandlerService or ICommandService from context evaluation context fororg.jboss.tools.jst.jsp.commands.openCSSDialog
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-06 09:46:58.391
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.eclipse.wst.server.core 4 0 2015-08-06 09:46:59.954
+!MESSAGE Server WildFly 8.2 crm failed to start.
+
+!ENTRY org.eclipse.core.resources 4 2 2015-08-06 09:53:56.388
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.jboss.ide.eclipse.as.core.modules.SingleDeployableFactory.getModule(SingleDeployableFactory.java:272)
+	at org.jboss.ide.eclipse.as.core.modules.SingleDeployableFactory$FileDeletionListener.visit(SingleDeployableFactory.java:394)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at org.jboss.ide.eclipse.as.core.modules.SingleDeployableFactory$FileDeletionListener.resourceChanged(SingleDeployableFactory.java:373)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-06 09:54:04.100
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-06 09:54:22.923
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 

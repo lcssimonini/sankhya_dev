@@ -105,7 +105,7 @@ public class ClienteMB implements Serializable {
 			try {
 				clienteBean.update(cliente);
 			} catch(Exception ex) {
-				ScreenUtils.addMessage("Não foi possível editar o cliente", ex.getMessage());
+				ScreenUtils.addMessage("Não foi possível salvar o cliente", ex.getMessage());
 				return "";
 			}			
 		} else {
