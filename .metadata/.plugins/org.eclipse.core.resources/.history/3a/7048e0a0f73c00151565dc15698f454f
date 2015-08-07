@@ -1,0 +1,196 @@
+package br.com.simonini.entities;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import br.com.simonini.keys.ContatoClientePK;
+import br.com.simonini.utils.SimoUtils;
+
+@Entity
+@Table(name="contato")
+public class Contato implements Serializable{
+
+	private static final long serialVersionUID = -4035563719397519490L;
+
+	@EmbeddedId
+	private ContatoClientePK id;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+    private Cliente cliente;
+	
+	private String nome;
+	private String email;
+	private String telefone;
+	
+	// 1 - comprador
+	// 2 - vendedor
+	// 3 - auxiliar administrativo
+	// 4 - gerente
+	// 5 - diretor
+	private Integer cargo;
+
+	// 1 - comercial
+	// 2 - financeiro
+	// 3 - serviços
+	// 4 - indústria
+	// 1 - almoxarifado
+	// 2 - recursos humanos
+	// 3 - fiscal
+	// 4 - contábil
+	private Integer departamento;
+	
+	private String cargoContato;
+	private String tipoContato;
+	
+	public static Map<String, Integer> cargoMap;
+	public static Map<String, Integer> departamentoMap;
+	
+	static {
+		cargoMap  = new HashMap<String, Integer>();
+		cargoMap.put("Comprador", new Integer(1));
+		cargoMap.put("Vendedor", new Integer(2));
+		cargoMap.put("Auxiliar administrativo", new Integer(3));
+		cargoMap.put("Gerente", new Integer(4));
+		cargoMap.put("Diretor", new Integer(5));
+	        
+		departamentoMap  = new HashMap<String, Integer>();
+		departamentoMap.put("Comercial", new Integer(1));
+		departamentoMap.put("Financeiro", new Integer(2));
+		departamentoMap.put("Serviços", new Integer(3));
+		departamentoMap.put("Indústria", new Integer(4));
+		departamentoMap.put("Almoxarifado", new Integer(5));
+		departamentoMap.put("Recursos humanos", new Integer(6));
+		departamentoMap.put("Fiscal", new Integer(7));
+		departamentoMap.put("Contábil", new Integer(8));
+	}
+		
+    public Contato() {
+    }
+    
+    public Contato(ContatoClientePK pk, Cliente cliente, String nome,
+			String email, String telefone, Integer cargo, Integer departamento) {
+		super();
+		this.id = pk;
+		this.cliente = cliente;
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+		this.cargo = cargo;
+		this.departamento = departamento;
+	}
+    
+	public String getCargoContato() {
+		this.cargoContato = SimoUtils.getKeyByValue(cargoMap, new Integer(this.getCargo()));
+		return cargoContato;
+	}
+	
+	public String getPorteCliente() {
+		this.porteCliente = SimoUtils.getKeyByValue(porteMap, new Integer(this.getPorte()));
+		return porteCliente;
+	}
+    
+    public long getSequencia() {
+    	return this.id.getSequencia();
+    }
+    
+    public static String getGreeting(){
+    	return "Bom dia Contato";
+    }
+    
+	public ContatoClientePK getId() {
+    	return this.id;
+    }
+    
+    public void setId(ContatoClientePK id){
+    	this.id = id;
+    }
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public Integer getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(Integer cargo) {
+		this.cargo = cargo;
+	}
+
+	public Integer getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(Integer departamento) {
+		this.departamento = departamento;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Contato other = (Contato) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		return true;
+	}
+
+	
+
+}

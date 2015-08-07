@@ -1,7 +1,6 @@
 package br.com.simonini.managedbeans;
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +12,7 @@ import javax.faces.bean.ViewScoped;
 import br.com.simonini.entities.Cliente;
 import br.com.simonini.entities.Contato;
 import br.com.simonini.session.ClienteBean;
-import br.com.simonini.utils.ScreenUtils;
+import br.com.simonini.utils.SimoUtils;
 
 @ManagedBean(name = "clienteMB")
 @ViewScoped
@@ -37,17 +36,8 @@ public class ClienteMB implements Serializable {
 	
 	@PostConstruct
 	public void init() {
-//		clientes = clienteBean.createClientes();
-		
-		tipo  = new HashMap<String, Integer>();
-	    tipo.put("Física", new Integer(1));
-	    tipo.put("Jurídica", new Integer(2));
-	        
-	    porte  = new HashMap<String, Integer>();
-	    porte.put("Micro", new Integer(1));
-	    porte.put("Pequeno", new Integer(2));
-	    porte.put("Medio", new Integer(3));
-	    porte.put("Grande", new Integer(4));
+		tipo = Cliente.tipoMap;
+		porte = Cliente.porteMap;
 	}
 	
 	public ClienteMB(){
@@ -105,14 +95,14 @@ public class ClienteMB implements Serializable {
 			try {
 				clienteBean.update(cliente);
 			} catch(Exception ex) {
-				ScreenUtils.addMessage("Não foi possível editar o cliente", ex.getMessage());
+				SimoUtils.addMessage("Não foi possível editar o cliente", ex.getMessage());
 				return "";
 			}			
 		} else {
 			try {
 				clienteBean.save(cliente);
 			} catch(Exception ex) {
-				ScreenUtils.addMessage("Não foi possível salvar o cliente", ex.getMessage());
+				SimoUtils.addMessage("Não foi possível salvar o cliente", ex.getMessage());
 				return "";
 			}
 		}
@@ -123,7 +113,7 @@ public class ClienteMB implements Serializable {
 		try {
 			clienteBean.delete(cliente);
 		} catch(Exception ex) {
-			ScreenUtils.addMessage("Não foi possível remover o contato", ex.getMessage());
+			SimoUtils.addMessage("Não foi possível remover o contato", ex.getMessage());
 			return "";
 		}
 		return "listaClientes";
@@ -132,10 +122,5 @@ public class ClienteMB implements Serializable {
 	public void adicionarContato(Contato contato) {
 		
 		
-	}
-	
-	public String getGreeting(){
-		this.greeting = clienteBean.getGreeting();
-		return greeting;
 	}
 }

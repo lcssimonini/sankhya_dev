@@ -1,6 +1,8 @@
 package br.com.simonini.entities;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -9,6 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import br.com.simonini.keys.ContatoClientePK;
+import br.com.simonini.utils.SimoUtils;
 
 @Entity
 @Table(name="contato")
@@ -31,7 +34,7 @@ public class Contato implements Serializable{
 	// 3 - auxiliar administrativo
 	// 4 - gerente
 	// 5 - diretor
-	private int cargo;
+	private Integer cargo;
 
 	// 1 - comercial
 	// 2 - financeiro
@@ -41,13 +44,38 @@ public class Contato implements Serializable{
 	// 2 - recursos humanos
 	// 3 - fiscal
 	// 4 - contábil
-	private int departamento;
+	private Integer departamento;
+	
+	private String cargoContato;
+	private String departamentoContato;
+	
+	public static Map<String, Integer> cargoMap;
+	public static Map<String, Integer> departamentoMap;
+	
+	static {
+		cargoMap  = new HashMap<String, Integer>();
+		cargoMap.put("Comprador", new Integer(1));
+		cargoMap.put("Vendedor", new Integer(2));
+		cargoMap.put("Auxiliar administrativo", new Integer(3));
+		cargoMap.put("Gerente", new Integer(4));
+		cargoMap.put("Diretor", new Integer(5));
+	        
+		departamentoMap  = new HashMap<String, Integer>();
+		departamentoMap.put("Comercial", new Integer(1));
+		departamentoMap.put("Financeiro", new Integer(2));
+		departamentoMap.put("Serviços", new Integer(3));
+		departamentoMap.put("Indústria", new Integer(4));
+		departamentoMap.put("Almoxarifado", new Integer(5));
+		departamentoMap.put("Recursos humanos", new Integer(6));
+		departamentoMap.put("Fiscal", new Integer(7));
+		departamentoMap.put("Contábil", new Integer(8));
+	}
 		
     public Contato() {
     }
     
     public Contato(ContatoClientePK pk, Cliente cliente, String nome,
-			String email, String telefone, int cargo, int departamento) {
+			String email, String telefone, Integer cargo, Integer departamento) {
 		super();
 		this.id = pk;
 		this.cliente = cliente;
@@ -56,6 +84,16 @@ public class Contato implements Serializable{
 		this.telefone = telefone;
 		this.cargo = cargo;
 		this.departamento = departamento;
+	}
+    
+	public String getCargoContato() {
+		this.cargoContato = SimoUtils.getKeyByValue(cargoMap, new Integer(this.getCargo()));
+		return cargoContato;
+	}
+	
+	public String getDepartamentoContato() {
+		this.departamentoContato = SimoUtils.getKeyByValue(departamentoMap , new Integer(this.getDepartamentoContato()));
+		return departamentoContato;
 	}
     
     public long getSequencia() {
@@ -106,19 +144,19 @@ public class Contato implements Serializable{
 		this.telefone = telefone;
 	}
 
-	public int getCargo() {
+	public Integer getCargo() {
 		return cargo;
 	}
 
-	public void setCargo(int cargo) {
+	public void setCargo(Integer cargo) {
 		this.cargo = cargo;
 	}
 
-	public int getDepartamento() {
+	public Integer getDepartamento() {
 		return departamento;
 	}
 
-	public void setDepartamento(int departamento) {
+	public void setDepartamento(Integer departamento) {
 		this.departamento = departamento;
 	}
 
@@ -152,7 +190,4 @@ public class Contato implements Serializable{
 			return false;
 		return true;
 	}
-
-	
-
 }

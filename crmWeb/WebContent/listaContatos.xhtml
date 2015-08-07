@@ -16,67 +16,37 @@
 				<small> <h:outputText value="Listagem" /></small>
 			</h3>
 		</div>
-			<p:dataTable id="dataTable" var="cliente" widgetVar="clientesTable"
-				value="#{contatoMB.clientes}" paginator="true" rows="5"
+			<p:dataTable id="dataTable" var="contato" widgetVar="clientesTable"
+				value="#{contatoMB.contatos}" paginator="true" rows="5"
 				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 				rowsPerPageTemplate="5,10,15">
 					       
 			    <p:column headerText="Id">
-			        <h:outputText value="#{cliente.id}" />
+			        <h:outputText value="#{contato.id}" />
 			    </p:column>
 			 
 			    <p:column headerText="Nome">
-			    	<h:link outcome="editarCliente" value="#{cliente.nome}"
-						title="Editar #{cliente.nome}">
-						<f:param name="id" value="#{cliente.id}" />
+			    	<h:link outcome="editarContato" value="#{contato.nome}"
+						title="Editar #{contato.nome}">
+						<f:param name="id" value="#{contato.id}" />
 					</h:link>
-
 			    </p:column>
 			    
 			    <p:column headerText="End.">
-			        <h:outputText value="#{cliente.endereco}" />
+			        <h:outputText value="#{contato.email}" />
 			    </p:column>
 
 			    <p:column headerText="Num.">
-			        <h:outputText value="#{cliente.numero}" />
+			        <h:outputText value="#{contato.telefone}" />
 			    </p:column>
 
 			    <p:column headerText="Tel">
-			        <h:outputText value="#{cliente.telefone}" />
+			        <h:outputText value="#{contato.cargoContato}" />
 			    </p:column>
 
 			    <p:column headerText="Tipo">
-			        <h:outputText value="#{cliente.tipo}" />
+			        <h:outputText value="#{contato.departamentoContato}" />
 			    </p:column>
-			 
-			    <p:column headerText="Doc.">
-			        <h:outputText value="#{cliente.documento}" />
-			    </p:column>
-
-			    <p:column headerText="Cidade">
-			        <h:outputText value="#{cliente.cidade}" />
-			    </p:column>
-
-			    <p:column headerText="Estado">
-			        <h:outputText value="#{cliente.estado}" />
-			    </p:column>
-
-			    <p:column headerText="Email">
-			        <h:outputText value="#{cliente.email}" />
-			    </p:column>			    			    
-
-			    <p:column headerText="Porte">
-			        <h:outputText value="#{cliente.porte}" />
-			    </p:column>
-			    
-			    <p:column headerText="Lim. cred.">
-			        <h:outputText value="#{cliente.limiteCredito}" />
-			    </p:column>
-
-			    <p:column headerText="Data de cadastro">
-			        <h:outputText value="#{cliente.dataCadastro}" />
-			    </p:column>
-
 			</p:dataTable>
 	</ui:define>
 </ui:composition>

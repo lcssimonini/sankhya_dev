@@ -164,28 +164,40 @@
 						<small> <h:outputText value="Listagem" /></small>
 					</h3>
 				</div>
-				<p:dataTable id="dataTable" var="contato" widgetVar="contatosTable"
-					value="#{clienteMB.cliente.contatos}" paginator="true" rows="5"
-					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-					rowsPerPageTemplate="5,10,15">
-						       
-				    <p:column headerText="Id">
-				        <h:outputText value="#{contato.sequencia}" />
-				    </p:column>
-				 
-				    <p:column headerText="Nome">
-				    	<h:link value="#{contato.nome}"
-							title="Editar #{contato.nome}">
-							<f:param name="id" value="#{cliente.id}" />
-						</h:link>
-	
-				    </p:column>
-				    
-				    <p:column headerText="Email">
-				        <h:outputText value="#{contato.email}" />
-				    </p:column>
-	
-				</p:dataTable>
+				
+			<p:dataTable id="dataTable" var="contato" widgetVar="clientesTable"
+				value="#{contatoMB.contatos}" paginator="true" rows="5"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15">
+					       
+			    <p:column headerText="Id">
+			        <h:outputText value="#{contato.id}" />
+			    </p:column>
+			 
+			    <p:column headerText="Nome">
+			    	<h:link outcome="editarContato" value="#{contato.nome}"
+						title="Editar #{contato.nome}">
+						<f:param name="id" value="#{contato.id}" />
+					</h:link>
+			    </p:column>
+			    
+			    <p:column headerText="End.">
+			        <h:outputText value="#{contato.email}" />
+			    </p:column>
+
+			    <p:column headerText="Num.">
+			        <h:outputText value="#{contato.telefone}" />
+			    </p:column>
+
+			    <p:column headerText="Tel">
+			        <h:outputText value="#{contato.cargoContato}" />
+			    </p:column>
+
+			    <p:column headerText="Tipo">
+			        <h:outputText value="#{contato.departamentoContato}" />
+			    </p:column>
+			</p:dataTable>
+				
 				<br/>
 			</ui:fragment>
 		

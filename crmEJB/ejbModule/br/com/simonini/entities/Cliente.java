@@ -2,6 +2,8 @@ package br.com.simonini.entities;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -11,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import br.com.simonini.utils.SimoUtils;
 
 @Entity
 @Table(name="cliente")
@@ -32,7 +35,7 @@ public class Cliente implements Serializable{
 	
 	// 1 - pessoa fisica
 	// 2 - pessoa juridica
-	private int tipo;
+	private Integer tipo;
 	private String documento;
 	private String cidade;
 	private String estado;
@@ -41,21 +44,46 @@ public class Cliente implements Serializable{
 	// 2 - pequeno
 	// 3 - medio
 	// 4 - grande
-	private int porte;
+	private Integer porte;
 	private double limiteCredito;
 	private Date dataCadastro;
 
+	private String tipoCliente;
+
+	private String porteCliente;
+	
+	public static Map<String, Integer> tipoMap;
+	public static Map<String, Integer> porteMap;
+	
+	static {
+		tipoMap  = new HashMap<String, Integer>();
+		tipoMap.put("Física", new Integer(1));
+		tipoMap.put("Jurídica", new Integer(2));
+	        
+		porteMap  = new HashMap<String, Integer>();
+		porteMap.put("Micro", new Integer(1));
+		porteMap.put("Pequeno", new Integer(2));
+		porteMap.put("Medio", new Integer(3));
+		porteMap.put("Grande", new Integer(4));
+	}
+	
+	public String getTipoCliente() {
+		this.tipoCliente = SimoUtils.getKeyByValue(tipoMap, new Integer(this.getTipo()));
+		return tipoCliente;
+	}
+	
+	public String getPorteCliente() {
+		this.porteCliente = SimoUtils.getKeyByValue(porteMap, new Integer(this.getPorte()));
+		return porteCliente;
+	}
+
     public Cliente() {
     }
-    
-    public static String getGreeting(){
-    	return "Bom dia a todos";
-    }
-    
+      
     public Cliente(Long id, Set<Contato> contatos, String nome,
-			String endereco, String numero, String telefone, int tipo,
+			String endereco, String numero, String telefone, Integer tipo,
 			String documento, String cidade, String estado, String email,
-			int porte, double limiteCredito, Date dataCadastro) {
+			Integer porte, double limiteCredito, Date dataCadastro) {
 		super();
 		this.id = id;
 		this.contatos = contatos;
@@ -121,11 +149,11 @@ public class Cliente implements Serializable{
 		this.telefone = telefone;
 	}
 	
-	public int getTipo() {
+	public Integer getTipo() {
 		return tipo;
 	}
 	
-	public void setTipo(int tipo) {
+	public void setTipo(Integer tipo) {
 		this.tipo = tipo;
 	}
 
@@ -161,11 +189,11 @@ public class Cliente implements Serializable{
 		this.email = email;
 	}
 	
-	public int getPorte() {
+	public Integer getPorte() {
 		return porte;
 	}
 	
-	public void setPorte(int porte) {
+	public void setPorte(Integer porte) {
 		this.porte = porte;
 	}
 	

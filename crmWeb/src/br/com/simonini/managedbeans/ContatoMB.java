@@ -1,7 +1,6 @@
 package br.com.simonini.managedbeans;
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +12,7 @@ import javax.faces.bean.ViewScoped;
 import br.com.simonini.entities.Contato;
 import br.com.simonini.keys.ContatoClientePK;
 import br.com.simonini.session.ContatoBean;
-import br.com.simonini.utils.ScreenUtils;
+import br.com.simonini.utils.SimoUtils;
 
 @ManagedBean(name = "contatoMB")
 @ViewScoped
@@ -37,23 +36,8 @@ public class ContatoMB implements Serializable {
 	
 	@PostConstruct
 	public void init() {
-		cargo  = new HashMap<String, Integer>();
-	    
-		cargo.put("Comprador", new Integer(1));
-		cargo.put("Vendedor", new Integer(2));
-		cargo.put("Auxiliar administrativo", new Integer(3));
-		cargo.put("Gerente", new Integer(4));
-		cargo.put("Diretor", new Integer(5));
-	        
-	    departamento  = new HashMap<String, Integer>();
-	    departamento.put("Comercial", new Integer(1));
-	    departamento.put("Financeiro", new Integer(2));
-	    departamento.put("Serviços", new Integer(3));
-	    departamento.put("Indústria", new Integer(4));
-	    departamento.put("Almoxarifado", new Integer(5));
-	    departamento.put("Recursos humanos", new Integer(6));
-	    departamento.put("Fiscal", new Integer(7));
-	    departamento.put("Contábil", new Integer(8));
+		cargo  = Contato.cargoMap;   
+		departamento = Contato.departamentoMap;
 	}
 	
 	public ContatoMB(){
@@ -110,7 +94,7 @@ public class ContatoMB implements Serializable {
 		try {
 			contatoBean.save(contato);
 		} catch(Exception ex) {
-			ScreenUtils.addMessage("Não foi possível salvar o contato", ex.getMessage());
+			SimoUtils.addMessage("Não foi possível salvar o contato", ex.getMessage());
 			return "";
 		}
 		return "listaMercadorias";
@@ -120,15 +104,10 @@ public class ContatoMB implements Serializable {
 		try {
 			contatoBean.delete(contato);
 		} catch(Exception ex) {
-			ScreenUtils.addMessage("Não foi possível remover o contato", ex.getMessage());
+			SimoUtils.addMessage("Não foi possível remover o contato", ex.getMessage());
 			return "";
 		}
 		return "listaContatos";
-	}
-	
-	public String getGreeting(){
-		this.greeting = contatoBean.getGreeting();
-		return greeting;
 	}
 
 }

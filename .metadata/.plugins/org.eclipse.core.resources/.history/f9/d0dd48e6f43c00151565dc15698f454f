@@ -1,0 +1,27 @@
+package br.com.simonini.utils;
+
+import static javax.faces.context.FacesContext.getCurrentInstance;
+
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Objects;
+
+import javax.faces.application.FacesMessage;
+
+public class SimoUtils {
+
+	public static void addMessage(String summary, String detail) {
+		getCurrentInstance().addMessage(null, new FacesMessage(summary, summary.concat("<br/>").concat(detail)));
+	}
+	
+	public static String getKeyByValue(Map<String, Integer> map, Integer value) {
+	    String key = null;
+		
+	    for (Entry<String, Integer> entry : map.entrySet()) {
+	        if (Objects.equals(value, entry.getValue())) {
+	            key =  entry.getKey();
+	        }
+	    }
+	    return key;
+	}
+}
