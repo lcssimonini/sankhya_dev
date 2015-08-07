@@ -1,6 +1,7 @@
 package br.com.simonini.daos;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import br.com.simonini.entities.Contato;
 import br.com.simonini.keys.ContatoClientePK;
@@ -11,6 +12,50 @@ public class ContatoDao extends GenericDao<Contato, ContatoClientePK> {
 
 	public ContatoDao(Class<?> clazz) {
 		super(clazz);
+	}
+	
+	@Override
+	public void save(Contato contato) {
+		EntityManager em = this.getEntityManager();
+		
+		Long sequencia = getValidSequencia(contato);
+		
+		contato.getId().setSequencia(sequencia);
+		
+		try {
+			this.beginTransaction();
+			em.persist(contato);
+			this.commit();
+		} catch (Exception e) {
+			this.rollBack();
+			throw e;
+		}
+	}
+	
+	private Long getValidSequencia(Contato contato) {
+		Long validSeq = null;
+		EntityManager em = null;
+		
+		Long idParam = contato.getId().getIdCliente2();
+		
+		try{
+			em = getEntityManager();
+	        Query q = em.createNativeQuery("select max(sequencia) from contato where contato.id_cliente = :id");
+	        q.setParameter("id", idParam);
+	        
+	        Object result = q.getSingleResult();
+	        
+	        if (result != null) {
+	        	Long id = new Long(result.toString());
+	        	validSeq = (id+1);
+	        } else {
+				validSeq = (long) 0;
+			}
+	        
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return validSeq;
 	}
 	
 	@Override
@@ -27,3 +72,5 @@ public class ContatoDao extends GenericDao<Contato, ContatoClientePK> {
 		}
 	}
 }
+
+

@@ -1,0 +1,73 @@
+package br.com.simonini.daos;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import br.com.simonini.entities.Contato;
+import br.com.simonini.keys.ContatoClientePK;
+import br.com.simonini.utils.GenericDao;
+
+
+public class ContatoDao extends GenericDao<Contato, ContatoClientePK> {
+
+	public ContatoDao(Class<?> clazz) {
+		super(clazz);
+	}
+	
+	@Override
+	public void save(Contato contato) {
+		EntityManager em = this.getEntityManager();
+		
+		Long sequencia = getValidSequencia(contato);
+		contato.getId().setSequencia(sequencia);
+		
+		try {
+			this.beginTransaction();
+			em.persist(contato);
+			this.commit();
+		} catch (Exception e) {
+			this.rollBack();
+			throw e;
+		}
+	}
+	
+	private Long getValidSequencia(Contato contato) {
+		Long validSeq = null;
+		EntityManager em = null;
+		
+		Long idParam = contato.getId().getIdCliente2();
+		
+		try{
+			em = getEntityManager();
+	        Query q = em.createNativeQuery("select max(sequencia) from contato where contato.id_cliente = :id");
+	        q.setParameter("id", idParam);
+	        
+	        Long id = new Long(q.getSingleResult().toString());
+	        validSeq =  (id+1);
+	        
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			if( em != null){
+				em.close();
+			}
+		}		
+		return validSeq;
+	}
+	
+	@Override
+	public void delete(Contato contato) {
+		EntityManager em = this.getEntityManager();
+		
+		try {
+			this.beginTransaction();
+			em.remove(em.getReference(Contato.class, contato.getId()));
+			this.commit();
+		} catch (Exception e) {
+			this.rollBack();
+			throw e;
+		}
+	}
+}
+
+

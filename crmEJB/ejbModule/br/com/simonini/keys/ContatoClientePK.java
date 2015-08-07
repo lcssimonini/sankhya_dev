@@ -12,10 +12,10 @@ public class ContatoClientePK implements Serializable {
 
 	private static final long serialVersionUID = -2997064521885342444L;
 
-	@Column(name="ID_CLIENTE", updatable=false)
+	@Column(name="id_cliente")
 	private long idCliente2;
 	
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long sequencia;
 
 	public ContatoClientePK() {

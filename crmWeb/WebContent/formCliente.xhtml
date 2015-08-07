@@ -173,7 +173,7 @@
 				rowsPerPageTemplate="5,10,15">
 					       
 			    <p:column headerText="Id">
-			        <h:outputText value="#{contato.id}" />
+			        <h:outputText value="#{contato.sequencia}" />
 			    </p:column>
 			 
 			    <p:column headerText="Nome">
@@ -183,19 +183,19 @@
 					</h:link>
 			    </p:column>
 			    
-			    <p:column headerText="End.">
+			    <p:column headerText="Email">
 			        <h:outputText value="#{contato.email}" />
 			    </p:column>
 
-			    <p:column headerText="Num.">
+			    <p:column headerText="Tel.">
 			        <h:outputText value="#{contato.telefone}" />
 			    </p:column>
 
-			    <p:column headerText="Tel">
+			    <p:column headerText="Cargo">
 			        <h:outputText value="#{contato.cargoContato}" />
 			    </p:column>
 
-			    <p:column headerText="Tipo">
+			    <p:column headerText="Dep.">
 			        <h:outputText value="#{contato.departamentoContato}" />
 			    </p:column>
 			</p:dataTable>
