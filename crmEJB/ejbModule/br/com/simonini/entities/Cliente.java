@@ -68,13 +68,37 @@ public class Cliente implements Serializable{
 	}
 	
 	public String getTipoCliente() {
-		this.tipoCliente = SimoUtils.getKeyByValue(tipoMap, new Integer(this.getTipo()));
-		return tipoCliente;
+		Integer tipoValue = this.getTipo();
+		
+		if (tipoValue == null) {
+			this.tipoCliente = "nenhum";
+		} else {
+			String mapped = SimoUtils.getKeyByValue(tipoMap, tipoValue);
+			
+			if(mapped == null){
+				this.tipoCliente = "nenhum";
+			} else {
+				this.tipoCliente = mapped;
+			}
+		}
+		return this.tipoCliente;
 	}
 	
 	public String getPorteCliente() {
-		this.porteCliente = SimoUtils.getKeyByValue(porteMap, new Integer(this.getPorte()));
-		return porteCliente;
+		Integer porteValue = this.getPorte();
+		
+		if (porteValue == null) {
+			this.porteCliente = "nenhum";
+		} else {
+			String mapped = SimoUtils.getKeyByValue(porteMap, porteValue); 
+			
+			if(mapped == null){
+				this.porteCliente = "nenhum";
+			} else {
+				this.porteCliente = mapped;
+			}
+		}
+		return this.porteCliente;
 	}
 
     public Cliente() {

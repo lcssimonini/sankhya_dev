@@ -1,0 +1,265 @@
+package br.com.simonini.entities;
+
+import java.io.Serializable;
+import java.sql.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import br.com.simonini.utils.SimoUtils;
+
+@Entity
+@Table(name="cliente")
+public class Cliente implements Serializable{
+
+	private static final long serialVersionUID = 4881969926249241973L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="cliente", orphanRemoval=true)
+	private Set<Contato> contatos;
+	
+	private String nome;
+	private String endereco;
+	private String numero;
+	private String telefone;
+	
+	// 1 - pessoa fisica
+	// 2 - pessoa juridica
+	private Integer tipo;
+	private String documento;
+	private String cidade;
+	private String estado;
+	private String email;
+	// 1 - micro
+	// 2 - pequeno
+	// 3 - medio
+	// 4 - grande
+	private Integer porte;
+	private double limiteCredito;
+	private Date dataCadastro;
+
+	private String tipoCliente;
+
+	private String porteCliente;
+	
+	public static Map<String, Integer> tipoMap;
+	public static Map<String, Integer> porteMap;
+	
+	static {
+		tipoMap  = new HashMap<String, Integer>();
+		tipoMap.put("Física", new Integer(1));
+		tipoMap.put("Jurídica", new Integer(2));
+	        
+		porteMap  = new HashMap<String, Integer>();
+		porteMap.put("Micro", new Integer(1));
+		porteMap.put("Pequeno", new Integer(2));
+		porteMap.put("Medio", new Integer(3));
+		porteMap.put("Grande", new Integer(4));
+	}
+	
+	public String getTipoCliente() {
+		Integer tipoValue = this.getTipo();
+		
+		if (tipoValue == null) {
+			this.tipoCliente = "nenhum";
+		} else {
+			String mapped = SimoUtils.getKeyByValue(tipoMap, tipoValue);
+			
+			if(mapped == null){
+				this.tipoCliente = "nenhum";
+			} else {
+				this.tipoCliente = mapped;
+			}
+		}
+		return this.tipoCliente;
+	}
+	
+	public String getPorteCliente() {
+		String mapped = SimoUtils.getKeyByValue(tipoMap, new Integer(this.getTipo())); 
+		
+		if(mapped == null){
+			this.porteCliente = "nenhum";
+		} else {
+			this.porteCliente = mapped;
+		}
+		return this.porteCliente;
+	}
+
+    public Cliente() {
+    }
+      
+    public Cliente(Long id, Set<Contato> contatos, String nome,
+			String endereco, String numero, String telefone, Integer tipo,
+			String documento, String cidade, String estado, String email,
+			Integer porte, double limiteCredito, Date dataCadastro) {
+		super();
+		this.id = id;
+		this.contatos = contatos;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.numero = numero;
+		this.telefone = telefone;
+		this.tipo = tipo;
+		this.documento = documento;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.email = email;
+		this.porte = porte;
+		this.limiteCredito = limiteCredito;
+		this.dataCadastro = dataCadastro;
+	}
+
+	public Long getId() {
+    	return this.id;
+    }
+    
+    public void setId(Long id){
+    	this.id = id;
+    }
+    
+	public Set<Contato> getContatos() {
+		return contatos;
+	}
+	
+	public void setContatos(Set<Contato> contatos) {
+		this.contatos = contatos;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+	
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+	
+	public String getNumero() {
+		return numero;
+	}
+	
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	
+	public String getTelefone() {
+		return telefone;
+	}
+	
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	
+	public Integer getTipo() {
+		return tipo;
+	}
+	
+	public void setTipo(Integer tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getDocumento() {
+		return documento;
+	}
+	
+	public void setDocumento(String documento) {
+		this.documento = documento;
+	}
+	
+	public String getCidade() {
+		return cidade;
+	}
+	
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	
+	public String getEstado() {
+		return estado;
+	}
+	
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public Integer getPorte() {
+		return porte;
+	}
+	
+	public void setPorte(Integer porte) {
+		this.porte = porte;
+	}
+	
+	public double getLimiteCredito() {
+		return limiteCredito;
+	}
+	
+	public void setLimiteCredito(double limiteCredito) {
+		this.limiteCredito = limiteCredito;
+	}
+	
+	public Date getDataCadastro() {
+		return dataCadastro;
+	}
+	
+	public void setDataCadastro(Date dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
+	
+	@Override
+	public String toString() {
+		return "Cliente [nome=" + nome + ", email=" + email + ", dataCadastro="
+				+ dataCadastro + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((documento == null) ? 0 : documento.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cliente other = (Cliente) obj;
+		if (documento == null) {
+			if (other.documento != null)
+				return false;
+		} else if (!documento.equals(other.documento))
+			return false;
+		return true;
+	}
+}

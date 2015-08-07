@@ -145,15 +145,17 @@
 		</fieldset>
 		
 		<!-- listagem de contatos -->
-		
-			<p:commandButton 
-					value="Adicionar contato"
-					action="#{clienteMB.salvar}" 
-					styleClass="btn btn-success" 
-					onclick="dlg.show();"
-					oncomplete="dlg.hide();"
-					rendered="#{clienteMB.cliente.id != null}" />
+			
+			<h:link 
+				styleClass="btn btn-success" 
+				outcome="incluirContato"
+				rendered="#{clienteMB.cliente.id != null}">
 				
+				<i class="icon-pencil"></i>
+				<h:outputText value="Adicionar contato" escape="false" />
+				<f:param name="cliente" value="#{clienteMB.cliente.id}" />
+				
+			</h:link>
 			
 			<ui:fragment
 				rendered="#{clienteMB.cliente.id != null}">

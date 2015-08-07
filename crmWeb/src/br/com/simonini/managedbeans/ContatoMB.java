@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 
 import br.com.simonini.entities.Contato;
 import br.com.simonini.keys.ContatoClientePK;
@@ -24,6 +25,8 @@ public class ContatoMB implements Serializable {
 	private ContatoBean contatoBean;
 	
 	private ContatoClientePK idSelecionado;
+	
+	private String clienteId;
 	
 	private List<Contato> contatos;
 	
@@ -91,13 +94,15 @@ public class ContatoMB implements Serializable {
 
 	
 	public String salvar() {
+		ContatoClientePK pk = new ContatoClientePK(new Long(clienteId));
+		contato.setId(pk);
 		try {
 			contatoBean.save(contato);
 		} catch(Exception ex) {
 			SimoUtils.addMessage("Não foi possível salvar o contato", ex.getMessage());
 			return "";
 		}
-		return "listaMercadorias";
+		return "listaClientes";
 	}
 	
 	public String remover() {
@@ -107,7 +112,15 @@ public class ContatoMB implements Serializable {
 			SimoUtils.addMessage("Não foi possível remover o contato", ex.getMessage());
 			return "";
 		}
-		return "listaContatos";
+		return "listaClientes";
+	}
+
+	public String getClienteId() {
+		return clienteId;
+	}
+
+	public void setClienteId(String clienteId) {
+		this.clienteId = clienteId;
 	}
 
 }

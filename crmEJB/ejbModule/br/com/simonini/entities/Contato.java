@@ -74,6 +74,10 @@ public class Contato implements Serializable{
     public Contato() {
     }
     
+    public Contato(ContatoClientePK id) {
+    	this.id = id;
+    }
+    
     public Contato(ContatoClientePK pk, Cliente cliente, String nome,
 			String email, String telefone, Integer cargo, Integer departamento) {
 		super();
@@ -87,13 +91,37 @@ public class Contato implements Serializable{
 	}
     
 	public String getCargoContato() {
-		this.cargoContato = SimoUtils.getKeyByValue(cargoMap, new Integer(this.getCargo()));
-		return cargoContato;
+		Integer cargoValue = this.getCargo();
+		
+		if (cargoValue == null) {
+			this.cargoContato = "nenhum";
+		} else {
+			String mapped = SimoUtils.getKeyByValue(cargoMap, cargoValue); 
+			
+			if(mapped == null){
+				this.cargoContato = "nenhum";
+			} else {
+				this.cargoContato = mapped;
+			}
+		}
+		return this.cargoContato;
 	}
 	
 	public String getDepartamentoContato() {
-		this.departamentoContato = SimoUtils.getKeyByValue(departamentoMap , new Integer(this.getDepartamentoContato()));
-		return departamentoContato;
+		Integer departamentoValue = this.getDepartamento();
+		
+		if (departamentoValue == null) {
+			this.departamentoContato = "nenhum";
+		} else {
+			String mapped = SimoUtils.getKeyByValue(departamentoMap, departamentoValue);
+			
+			if(mapped == null){
+				this.departamentoContato = "nenhum";
+			} else {
+				this.departamentoContato = mapped;
+			}
+		}
+		return this.departamentoContato;
 	}
     
     public long getSequencia() {

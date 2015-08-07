@@ -24,7 +24,7 @@
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
-						value="Endereço" /></label>
+						value="Email" /></label>
 				<div class="controls">
 					<h:inputText value="#{contatoMB.contato.email}"
 						label="Endereço" required="false"
@@ -36,11 +36,11 @@
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
-						value="Número" /></label>
+						value="Telefone" /></label>
 				<div class="controls">
 					<h:inputText value="#{contatoMB.contato.telefone}"
 						label="Número" required="false"
-						styleClass="input-small">
+						styleClass="input-large">
 						<f:validateLength minimum="0" maximum="4" />
 					</h:inputText>
 				</div>
@@ -49,9 +49,9 @@
 		
 			<div class="control-group">
 				<label class="control-label"><h:outputText
-						value="Tipo" /></label>
+						value="Cargo" /></label>
 				<div class="controls">
-					<p:selectOneMenu id="tipo" value="#{contatoMB.contato.cargo}" style="width:150px">
+					<p:selectOneMenu id="cargo" value="#{contatoMB.contato.cargo}" style="width:150px">
                 		<f:selectItem itemLabel="Selecione o cargo" itemValue="" noSelectionOption="true" />
                 		<f:selectItems value="#{contatoMB.cargo}" />
             		</p:selectOneMenu>
@@ -60,9 +60,9 @@
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
-						value="Tipo" /></label>
+						value="Departamento" /></label>
 				<div class="controls">
-					<p:selectOneMenu id="tipo" value="#{contatoMB.contato.departamento}" style="width:150px">
+					<p:selectOneMenu id="departamento" value="#{contatoMB.contato.departamento}" style="width:150px">
                 		<f:selectItem itemLabel="Selecione o departamento" itemValue="" noSelectionOption="true" />
                 		<f:selectItems value="#{contatoMB.departamento}" />
             		</p:selectOneMenu>
@@ -82,7 +82,7 @@
 					rendered="#{contatoMB.contato != null}" />
 				
 				<p:button value="Cancelar"
-					outcome="listaClientes" styleClass="btn" />
+					outcome="formCliente" styleClass="btn" />
 					    
 			    <p:commandButton 
 			    	value="Excluir"
