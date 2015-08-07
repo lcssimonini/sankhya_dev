@@ -3,6 +3,8 @@ package br.com.simonini.daos;
 import java.sql.Date;
 import java.util.Calendar;
 
+import javax.persistence.EntityManager;
+
 import br.com.simonini.entities.Cliente;
 import br.com.simonini.utils.GenericDao;
 
@@ -20,6 +22,20 @@ public class ClienteDao extends GenericDao<Cliente, Long> {
 		try {
 			this.beginTransaction();
 			this.getEntityManager().persist(cliente);
+			this.commit();
+		} catch (Exception e) {
+			this.rollBack();
+			throw e;
+		}
+	}
+	
+	@Override
+	public void delete(Cliente cliente) {
+		EntityManager em = this.getEntityManager();
+		
+		try {
+			this.beginTransaction();
+			em.remove(em.getReference(Cliente.class, cliente.getId()));
 			this.commit();
 		} catch (Exception e) {
 			this.rollBack();

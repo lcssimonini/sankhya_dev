@@ -22,6 +22,11 @@ public class ContatoClientePK implements Serializable {
 		super();
 	}
 
+	public ContatoClientePK(long idCliente2) {
+		super();
+		this.idCliente2 = idCliente2;
+	}
+
 	public long getIdCliente2() {
 		return this.idCliente2;
 	}

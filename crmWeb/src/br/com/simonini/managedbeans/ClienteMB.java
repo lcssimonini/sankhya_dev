@@ -1,7 +1,6 @@
 package br.com.simonini.managedbeans;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +11,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 import br.com.simonini.entities.Cliente;
+import br.com.simonini.entities.Contato;
 import br.com.simonini.session.ClienteBean;
 import br.com.simonini.utils.ScreenUtils;
 
@@ -127,6 +127,11 @@ public class ClienteMB implements Serializable {
 			return "";
 		}
 		return "listaClientes";
+	}
+	
+	public void adicionarContato(Contato contato) {
+		
+		
 	}
 	
 	public String getGreeting(){

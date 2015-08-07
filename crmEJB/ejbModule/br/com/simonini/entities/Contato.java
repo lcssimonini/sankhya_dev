@@ -22,7 +22,6 @@ public class Contato implements Serializable{
 	@ManyToOne(fetch = FetchType.EAGER)
     private Cliente cliente;
 	
-	private int codigo;
 	private String nome;
 	private String email;
 	private String telefone;
@@ -47,18 +46,21 @@ public class Contato implements Serializable{
     public Contato() {
     }
     
-    public Contato(ContatoClientePK pk, Cliente cliente, int codigo, String nome,
+    public Contato(ContatoClientePK pk, Cliente cliente, String nome,
 			String email, String telefone, int cargo, int departamento) {
 		super();
 		this.id = pk;
 		this.cliente = cliente;
-		this.codigo = codigo;
 		this.nome = nome;
 		this.email = email;
 		this.telefone = telefone;
 		this.cargo = cargo;
 		this.departamento = departamento;
 	}
+    
+    public long getSequencia() {
+    	return this.id.getSequencia();
+    }
     
     public static String getGreeting(){
     	return "Bom dia Contato";
@@ -78,14 +80,6 @@ public class Contato implements Serializable{
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
-	}
-	
-	public int getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
 	}
 
 	public String getNome() {
@@ -132,8 +126,8 @@ public class Contato implements Serializable{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((cliente == null) ? 0 : cliente.hashCode());
-		result = prime * result + codigo;
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
 	}
 
@@ -146,13 +140,19 @@ public class Contato implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Contato other = (Contato) obj;
-		if (cliente == null) {
-			if (other.cliente != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!cliente.equals(other.cliente))
+		} else if (!id.equals(other.id))
 			return false;
-		if (codigo != other.codigo)
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
 			return false;
 		return true;
 	}
+
+	
+
 }

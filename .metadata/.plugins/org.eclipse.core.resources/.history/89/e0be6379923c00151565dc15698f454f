@@ -1,0 +1,50 @@
+package br.com.simonini.session;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
+import br.com.simonini.daos.ContatoDao;
+import br.com.simonini.entities.ContatoCliente;
+import br.com.simonini.entities.Contato;
+
+@Stateless(mappedName = "contatoBean")
+@LocalBean
+public class ContatoBean extends ContatoDao {
+
+    public ContatoBean() {
+    	super(Contato.class);
+    }
+    
+    public String getGreeting(){
+    	return Contato.getGreeting();
+    }
+    
+    public List<ContatoCliente> createContatos(ContatoCliente cliente) {
+		
+    	List<Contato> contatos= new ArrayList<Contato>();
+		
+    	ContatoCliente contato1 = new ContatoCliente();
+		contato1.setId(new Long(1));
+	    contato1.setNome("alfredo");
+	    contato1.setDocumento("321321");
+	    
+	    ContatoCliente contato2 = new ContatoCliente();
+	    contato2.setId(new Long(2));
+	    contato2.setNome("ronaldo");
+	    contato2.setDocumento("321321");
+	    
+	    ContatoCliente contato3 = new ContatoCliente();
+	    contato3.setId(new Long(3));
+	    contato3.setNome("silas");
+	    contato3.setDocumento("321321");
+	    
+	    contatos.add(contato1);
+	    contatos.add(contato2);
+	    contatos.add(contato3);
+	    
+	    return clientes;
+    }
+}

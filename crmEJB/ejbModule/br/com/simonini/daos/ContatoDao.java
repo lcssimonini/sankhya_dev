@@ -1,5 +1,7 @@
 package br.com.simonini.daos;
 
+import javax.persistence.EntityManager;
+
 import br.com.simonini.entities.Contato;
 import br.com.simonini.keys.ContatoClientePK;
 import br.com.simonini.utils.GenericDao;
@@ -9,5 +11,19 @@ public class ContatoDao extends GenericDao<Contato, ContatoClientePK> {
 
 	public ContatoDao(Class<?> clazz) {
 		super(clazz);
+	}
+	
+	@Override
+	public void delete(Contato contato) {
+		EntityManager em = this.getEntityManager();
+		
+		try {
+			this.beginTransaction();
+			em.remove(em.getReference(Contato.class, contato.getId()));
+			this.commit();
+		} catch (Exception e) {
+			this.rollBack();
+			throw e;
+		}
 	}
 }

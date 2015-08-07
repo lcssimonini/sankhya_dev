@@ -6,12 +6,9 @@
 
 	<h:form styleClass="form-horizontal">
 		<fieldset>
-			<legend>
 				<h3>
 					<h:outputText value="Cadastro de cliente" />
-					<small> <h:outputText value="#{subtitle}" /></small>
 				</h3>
-			</legend>
 			
 			<div class="control-group">
 				<label class="control-label">
@@ -146,32 +143,80 @@
 			</div>
 			
 		</fieldset>
+		
+		<!-- listagem de contatos -->
+		
+			<p:commandButton 
+					value="Adicionar contato"
+					action="#{clienteMB.salvar}" 
+					styleClass="btn btn-success" 
+					onclick="dlg.show();"
+					oncomplete="dlg.hide();"
+					rendered="#{clienteMB.cliente.id != null}" />
+				
+			
+			<ui:fragment
+				rendered="#{clienteMB.cliente.id != null}">
+				
+				<div style="border-bottom: 1px solid #E5E5E5;">
+					<h3>
+						<h:outputText value="Contatos" />
+						<small> <h:outputText value="Listagem" /></small>
+					</h3>
+				</div>
+				<p:dataTable id="dataTable" var="contato" widgetVar="contatosTable"
+					value="#{clienteMB.cliente.contatos}" paginator="true" rows="5"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					rowsPerPageTemplate="5,10,15">
+						       
+				    <p:column headerText="Id">
+				        <h:outputText value="#{contato.sequencia}" />
+				    </p:column>
+				 
+				    <p:column headerText="Nome">
+				    	<h:link value="#{contato.nome}"
+							title="Editar #{contato.nome}">
+							<f:param name="id" value="#{cliente.id}" />
+						</h:link>
+	
+				    </p:column>
+				    
+				    <p:column headerText="Email">
+				        <h:outputText value="#{contato.email}" />
+				    </p:column>
+	
+				</p:dataTable>
+				<br/>
+			</ui:fragment>
+		
+		<!-- fim da listagem de contatos -->
 
 		<div class="control-group">
 			<div class="controls">
-				<p:commandButton value="Salvar"
-					action="#{clienteMB.salvar}" styleClass="btn btn-success" onclick="dlg.show();" oncomplete="dlg.hide();"
+				<p:commandButton 
+					value="Salvar"
+					action="#{clienteMB.salvar}" 
+					styleClass="btn btn-success" 
+					onclick="dlg.show();"
+					oncomplete="dlg.hide();"
 					rendered="#{clienteMB.cliente != null}" />
+				
 				<p:button value="Cancelar"
 					outcome="listaClientes" styleClass="btn" />
-				<p:commandButton value="Excluir"
-					onclick="confirmation.show()"
-					rendered="#{clienteMB.cliente.id != null}" immediate="true"
-					styleClass="btn btn-danger" />
+					    
+			    <p:commandButton 
+			    	value="Excluir"
+			    	action="#{clienteMB.remover}" 
+					rendered="#{clienteMB.cliente.id != null}" 
+					immediate="true"
+					styleClass="btn btn-danger" />		    
+			    
 			</div>
 		</div>
 		
-		<p:dialog id="dialog" header="Processando" widgetVar="dlg" dynamic="true" modal="true">  
+		<p:dialog id="dialog" header="Processando" widgetVar="dlg" dynamic="true" modal="true">
 	    	<h:outputText value="Aguarde, processando requisição" />
 		</p:dialog>
-		
-		<p:confirmDialog id="confirmDialog" message="Confirmar exclusão de cliente"
-			header="Excluir cliente" severity="alert" widgetVar="confirmation">  
-	        <p:commandButton id="confirm" value="Sim" update="messages" 
-	        	oncomplete="confirmation.hide()" action="#{clienteMB.remover}" />  
-	        <p:commandButton id="decline" value="Não" 
-	        	onclick="confirmation.hide()" type="button" />
-	    </p:confirmDialog>
 	
 		<p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
 	</h:form>

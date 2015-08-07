@@ -1,0 +1,114 @@
+package br.com.simonini.managedbeans;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
+import br.com.simonini.entities.Contato;
+import br.com.simonini.keys.ContatoClientePK;
+import br.com.simonini.session.ContatoBean;
+import br.com.simonini.utils.ScreenUtils;
+
+@ManagedBean(name = "contatoMB")
+@ViewScoped
+public class ContatoMB implements Serializable {
+
+	private static final long serialVersionUID = 4575274497323620647L;
+
+	@EJB
+	private ContatoBean contatoBean;
+	
+	private ContatoClientePK idSelecionado;
+	
+	private List<Contato> contatos;
+	
+	private Contato contato;
+	
+	public String greeting;
+	
+	private Map<String, Integer> cargo;
+	private Map<String, Integer> departamento;
+	
+	@PostConstruct
+	public void init() {
+		cargo  = new HashMap<String, Integer>();
+	    
+		cargo.put("Comprador", new Integer(1));
+		cargo.put("Vendedor", new Integer(2));
+		cargo.put("Auxiliar administrativo", new Integer(3));
+		cargo.put("Gerente", new Integer(4));
+		cargo.put("Diretor", new Integer(5));
+	        
+	    departamento  = new HashMap<String, Integer>();
+	    departamento.put("Comercial", new Integer(1));
+	    departamento.put("Financeiro", new Integer(2));
+	    departamento.put("Serviços", new Integer(3));
+	    departamento.put("Indústria", new Integer(4));
+	}
+	
+	public ContatoMB(){
+	}
+	
+	public void setIdSelecionado(ContatoClientePK idSelecionado) {
+		this.idSelecionado = idSelecionado;
+	}
+	
+	public ContatoClientePK getIdSelecionado() {
+		return idSelecionado;
+	}
+	
+	public Contato getContato() {
+		return contato;
+	}
+	
+	public void incluir(){
+		contato = new Contato();
+	}
+	
+	public void editar() {
+		if (idSelecionado == null) {
+			return;
+		}
+		contato = contatoBean.findById(idSelecionado);
+	}
+	
+	public List<Contato> getContatos() {
+		if (contatos == null) {
+			contatos = contatoBean.findAll();
+		}
+		return contatos;
+	}
+
+	
+	public String salvar() {
+		try {
+			contatoBean.save(contato);
+		} catch(Exception ex) {
+			ScreenUtils.addMessage("Não foi possível salvar o contato", ex.getMessage());
+			return "";
+		}
+		return "listaMercadorias";
+	}
+	
+	public String remover() {
+		try {
+			contatoBean.delete(contato);
+		} catch(Exception ex) {
+			ScreenUtils.addMessage("Não foi possível remover o contato", ex.getMessage());
+			return "";
+		}
+		return "listaContatos";
+	}
+	
+	public String getGreeting(){
+		this.greeting = contatoBean.getGreeting();
+		return greeting;
+	}
+
+}

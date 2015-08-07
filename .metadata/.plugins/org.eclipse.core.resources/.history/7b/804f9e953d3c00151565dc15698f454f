@@ -1,0 +1,41 @@
+package br.com.simonini.daos;
+
+import java.sql.Date;
+import java.util.Calendar;
+
+import br.com.simonini.entities.Cliente;
+import br.com.simonini.utils.GenericDao;
+
+public class ClienteDao extends GenericDao<Cliente, Long> {
+
+	public ClienteDao(Class<?> clazz) {
+		super(clazz);
+	}
+	
+	@Override
+	public void save(Cliente cliente) {
+		
+		cliente.setDataCadastro(new Date(Calendar.getInstance().getTimeInMillis()));
+		
+		try {
+			this.beginTransaction();
+			this.getEntityManager().persist(cliente);
+			this.commit();
+		} catch (Exception e) {
+			this.rollBack();
+			throw e;
+		}
+	}
+	
+	@Override
+	public void delete(Cliente cliente) {
+		try {
+			this.beginTransaction();
+			this.entityManager.remove(entity);
+			this.commit();
+		} catch (Exception e) {
+			this.rollBack();
+			throw e;
+		}
+	}
+}

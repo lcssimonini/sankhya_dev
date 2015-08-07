@@ -1,8 +1,11 @@
 package br.com.simonini.managedbeans;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -29,9 +32,49 @@ public class ContatoMB implements Serializable {
 	
 	public String greeting;
 	
+	private Map<String, Integer> cargo;
+	private Map<String, Integer> departamento;
+	
+	@PostConstruct
+	public void init() {
+		cargo  = new HashMap<String, Integer>();
+	    
+		cargo.put("Comprador", new Integer(1));
+		cargo.put("Vendedor", new Integer(2));
+		cargo.put("Auxiliar administrativo", new Integer(3));
+		cargo.put("Gerente", new Integer(4));
+		cargo.put("Diretor", new Integer(5));
+	        
+	    departamento  = new HashMap<String, Integer>();
+	    departamento.put("Comercial", new Integer(1));
+	    departamento.put("Financeiro", new Integer(2));
+	    departamento.put("Serviços", new Integer(3));
+	    departamento.put("Indústria", new Integer(4));
+	    departamento.put("Almoxarifado", new Integer(5));
+	    departamento.put("Recursos humanos", new Integer(6));
+	    departamento.put("Fiscal", new Integer(7));
+	    departamento.put("Contábil", new Integer(8));
+	}
+	
 	public ContatoMB(){
 	}
 	
+	public Map<String, Integer> getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(Map<String, Integer> cargo) {
+		this.cargo = cargo;
+	}
+
+	public Map<String, Integer> getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(Map<String, Integer> departamento) {
+		this.departamento = departamento;
+	}
+
 	public void setIdSelecionado(ContatoClientePK idSelecionado) {
 		this.idSelecionado = idSelecionado;
 	}
