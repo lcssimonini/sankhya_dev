@@ -2,8 +2,10 @@ package br.com.simonini.daos;
 
 import java.sql.Date;
 import java.util.Calendar;
+import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import br.com.simonini.entities.Cliente;
 import br.com.simonini.utils.GenericDao;
@@ -12,6 +14,13 @@ public class ClienteDao extends GenericDao<Cliente, Long> {
 
 	public ClienteDao(Class<?> clazz) {
 		super(clazz);
+	}
+	
+	public List<Cliente> findByNome(String nome) {
+		Query q = this.getEntityManager().createQuery("select object(c) from Cliente as c where c.nome contains :nome");
+		q.setParameter("nome", nome);
+		
+		return (List<Cliente>) q.getResultList();
 	}
 	
 	@Override

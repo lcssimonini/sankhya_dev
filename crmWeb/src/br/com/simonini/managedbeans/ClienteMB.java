@@ -33,7 +33,9 @@ public class ClienteMB implements Serializable {
 	
 	private Map<String, Integer> tipo;
 	private Map<String, Integer> porte;
-	
+
+	private String nomeBusca;
+
 	@PostConstruct
 	public void init() {
 		tipo = Cliente.tipoMap;
@@ -71,6 +73,19 @@ public class ClienteMB implements Serializable {
 		return cliente;
 	}
 	
+	public String getNomeBusca() {
+		return nomeBusca;
+	}
+
+	public void setNomeBusca(String nomeBusca) {
+		this.nomeBusca = nomeBusca;
+	}
+	
+	public String buscar() {
+		this.clientes = clienteBean.findByNome(this.nomeBusca);
+		return "listaClientes";
+	}
+	
 	public void incluir(){
 		cliente = new Cliente();
 	}
@@ -88,6 +103,10 @@ public class ClienteMB implements Serializable {
 		}
 		return clientes;
 	}
+	
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
+    }
 
 	
 	public String salvar() {

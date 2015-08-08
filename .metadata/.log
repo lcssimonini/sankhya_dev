@@ -4541,3 +4541,54 @@ Binding(CTRL+SHIFT+ARROW_DOWN,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2015-08-07 21:36:16.843
+!MESSAGE The server was shutdown forcefully. All processes were terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-07 21:36:32.834
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 16973826 2015-08-07 21:39:42.502
+!MESSAGE The server was shutdown forcefully. All processes were terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-07 21:54:12.131
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.eclipse.debug.core 4 2 2015-08-07 21:58:05.906
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.jboss.ide.eclipse.as.wtp.core.server.behavior.ControllableServerBehavior.setModulesStopped(ControllableServerBehavior.java:220)
+	at org.jboss.ide.eclipse.as.wtp.core.server.behavior.ControllableServerBehavior.setModulesStopped(ControllableServerBehavior.java:227)
+	at org.jboss.ide.eclipse.as.wtp.core.server.behavior.ControllableServerBehavior.setServerStopped(ControllableServerBehavior.java:216)
+	at org.jboss.ide.eclipse.as.wtp.core.server.launch.ProcessTerminatedDebugListener.handleProcessTerminatedEvent(ProcessTerminatedDebugListener.java:74)
+	at org.jboss.ide.eclipse.as.wtp.core.server.launch.ProcessTerminatedDebugListener.handleDebugEvents(ProcessTerminatedDebugListener.java:48)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1187)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:431)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.debug.core 4 125 2015-08-07 21:58:05.909
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+java.lang.NullPointerException
+	at org.jboss.ide.eclipse.as.wtp.core.server.behavior.ControllableServerBehavior.setModulesStopped(ControllableServerBehavior.java:220)
+	at org.jboss.ide.eclipse.as.wtp.core.server.behavior.ControllableServerBehavior.setModulesStopped(ControllableServerBehavior.java:227)
+	at org.jboss.ide.eclipse.as.wtp.core.server.behavior.ControllableServerBehavior.setServerStopped(ControllableServerBehavior.java:216)
+	at org.jboss.ide.eclipse.as.wtp.core.server.launch.ProcessTerminatedDebugListener.handleProcessTerminatedEvent(ProcessTerminatedDebugListener.java:74)
+	at org.jboss.ide.eclipse.as.wtp.core.server.launch.ProcessTerminatedDebugListener.handleDebugEvents(ProcessTerminatedDebugListener.java:48)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1187)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:431)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-07 21:58:05.954
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-07 21:59:23.443
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-07 22:01:12.977
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
