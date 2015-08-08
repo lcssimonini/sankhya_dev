@@ -1,0 +1,92 @@
+package br.com.simonini.daos;
+
+import java.sql.Date;
+import java.util.Calendar;
+
+import javax.persistence.EntityManager;
+
+import br.com.simonini.entities.Cliente;
+import br.com.simonini.utils.GenericDao;
+
+public class ClienteDao extends GenericDao<Cliente, Long> {
+
+	public ClienteDao(Class<?> clazz) {
+		super(clazz);
+	}
+	
+	@Override
+	public void save(Cliente cliente) {
+		
+		cliente.setDataCadastro(new Date(Calendar.getInstance().getTimeInMillis()));
+		
+		if (!validaCredito(cliente)) {
+			try {
+				throw new Exception("Não é possível salvar o cliente pois o limite de crédito está acima do permitido");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		try {
+			this.beginTransaction();
+			this.getEntityManager().persist(cliente);
+			this.commit();
+		} catch (Exception e) {
+			this.rollBack();
+			throw e;
+		}
+	}
+	
+	@Override
+	public void delete(Cliente cliente) {
+		EntityManager em = this.getEntityManager();
+		
+		try {
+			this.beginTransaction();
+			em.remove(em.getReference(Cliente.class, cliente.getId()));
+			this.commit();
+		} catch (Exception e) {
+			this.rollBack();
+			throw e;
+		}
+	}
+	// 1 - micro
+	// 2 - pequeno
+	// 3 - medio
+	// 4 - grande
+	public boolean validaCredito(Cliente cliente){
+		boolean isValid = true;
+		double credito = cliente.getLimiteCredito();
+		
+		Integer porte = cliente.getPorte();
+		
+		if (porte != null) {
+			switch (porte) {
+			case 1:
+				if (credito > 0) {
+					isValid = false;
+				}
+				break;
+			case 2:
+				if (credito > 10000) {
+					isValid = false;
+				}
+				break;
+			case 3:
+				if (credito > 50000) {
+					isValid = false;
+				}
+				break;
+			case 4:
+				if (credito > 500000) {
+					isValid = false;
+				}
+				break;
+	
+			default:
+				break;
+		}
+		}		
+		return isValid;
+	}
+}

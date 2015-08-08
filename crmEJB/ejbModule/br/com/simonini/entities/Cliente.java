@@ -45,7 +45,7 @@ public class Cliente implements Serializable{
 	// 3 - medio
 	// 4 - grande
 	private Integer porte;
-	private double limiteCredito;
+	private Double limiteCredito;
 	private Date dataCadastro;
 
 	private String tipoCliente;
@@ -107,7 +107,7 @@ public class Cliente implements Serializable{
     public Cliente(Long id, Set<Contato> contatos, String nome,
 			String endereco, String numero, String telefone, Integer tipo,
 			String documento, String cidade, String estado, String email,
-			Integer porte, double limiteCredito, Date dataCadastro) {
+			Integer porte, Double limiteCredito, Date dataCadastro) {
 		super();
 		this.id = id;
 		this.contatos = contatos;
@@ -221,11 +221,11 @@ public class Cliente implements Serializable{
 		this.porte = porte;
 	}
 	
-	public double getLimiteCredito() {
+	public Double getLimiteCredito() {
 		return limiteCredito;
 	}
 	
-	public void setLimiteCredito(double limiteCredito) {
+	public void setLimiteCredito(Double limiteCredito) {
 		this.limiteCredito = limiteCredito;
 	}
 	

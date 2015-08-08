@@ -95,14 +95,14 @@ public class ClienteMB implements Serializable {
 			try {
 				clienteBean.update(cliente);
 			} catch(Exception ex) {
-				SimoUtils.addMessage("Não foi possível editar o cliente", ex.getMessage());
+				SimoUtils.addMessage("Não foi possível editar o cliente: "+ex.getMessage(), ex.getMessage());
 				return "";
 			}			
 		} else {
 			try {
 				clienteBean.save(cliente);
 			} catch(Exception ex) {
-				SimoUtils.addMessage("Não foi possível salvar o cliente", ex.getMessage());
+				SimoUtils.addMessage("Não foi possível salvar o cliente: "+ex.getMessage(), ex.getMessage());
 				return "";
 			}
 		}

@@ -1,0 +1,237 @@
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:form styleClass="form-horizontal">
+		<fieldset>
+				<h3>
+					<h:outputText value="Cadastro de cliente" />
+				</h3>
+			
+			<div class="control-group">
+				<label class="control-label">
+					<h:outputText value="Nome:" /></label>
+				<div class="controls">
+					<h:inputText 
+						value="#{clienteMB.cliente.nome}"
+						label="Nome" 
+						required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="2" maximum="60" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Endereço" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.endereco}"
+						label="Endereço" required="false"
+						styleClass="input-large">
+						<f:validateLength minimum="0" maximum="60" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Número" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.numero}"
+						label="Número" required="false"
+						styleClass="input-small">
+						<f:validateLength minimum="0" maximum="4" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Telefone" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.telefone}"
+						label="Telefone" required="false"
+						styleClass="input-large">
+						<f:validateLength minimum="0" maximum="4" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Tipo" /></label>
+				<div class="controls">
+					<p:selectOneMenu id="tipo" value="#{clienteMB.cliente.tipo}" style="width:150px">
+                		<f:selectItem itemLabel="Selecione o tipo" itemValue="" noSelectionOption="true" />
+                		<f:selectItems value="#{clienteMB.tipo}" />
+            		</p:selectOneMenu>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Documento" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.documento}"
+						label="Documento" required="false"
+						styleClass="input-large">
+						<f:validateLength minimum="0" maximum="12" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Cidade" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.cidade}"
+						label="Cidade" required="false"
+						styleClass="input-large">
+						<f:validateLength minimum="0" maximum="30" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Estado" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.estado}"
+						label="Estado" required="false"
+						styleClass="input-small">
+						<f:validateLength minimum="0" maximum="2" />
+					</h:inputText>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Email" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.email}"
+						label="Email" required="false"
+						styleClass="input-large">
+						<f:validateLength minimum="0" maximum="30" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Porte" /></label>
+				<div class="controls">
+					<p:selectOneMenu id="porte" value="#{clienteMB.cliente.porte}" style="width:150px">
+                		<f:selectItem itemLabel="Selecione o porte" itemValue="1" noSelectionOption="false" />
+                		<f:selectItems value="#{clienteMB.porte}" />
+            		</p:selectOneMenu>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Limite de crédito" /></label>
+				<div class="controls">
+					<h:inputText value="#{clienteMB.cliente.limiteCredito}"
+						label="Limite de crédito" required="false"
+						styleClass="input-large">
+						<f:validateLength minimum="0" maximum="30" />
+					</h:inputText>
+				</div>
+			</div>
+			
+		</fieldset>
+		
+		<!-- listagem de contatos -->
+			
+			<h:link 
+				styleClass="btn btn-success" 
+				outcome="incluirContato"
+				rendered="#{clienteMB.cliente.id != null}">
+				
+				<i class="icon-pencil"></i>
+				<h:outputText value="Adicionar contato" escape="false" />
+				<f:param name="cliente" value="#{clienteMB.cliente.id}" />
+				
+			</h:link>
+			
+			<ui:fragment
+				rendered="#{clienteMB.cliente.id != null}">
+				
+				<div style="border-bottom: 1px solid #E5E5E5;">
+					<h3>
+						<h:outputText value="Contatos" />
+						<small> <h:outputText value="Listagem" /></small>
+					</h3>
+				</div>
+				
+			<p:dataTable id="dataTable" var="contato" widgetVar="clientesTable"
+				value="#{contatoMB.contatos}" paginator="true" rows="5"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15">
+					       
+			    <p:column headerText="Id">
+			        <h:outputText value="#{contato.sequencia}" />
+			    </p:column>
+			 
+			    <p:column headerText="Nome">
+			    	<h:link outcome="editarContato" value="#{contato.nome}"
+						title="Editar #{contato.nome}">
+						<f:param name="id" value="#{contato.id}" />
+					</h:link>
+			    </p:column>
+			    
+			    <p:column headerText="Email">
+			        <h:outputText value="#{contato.email}" />
+			    </p:column>
+
+			    <p:column headerText="Tel.">
+			        <h:outputText value="#{contato.telefone}" />
+			    </p:column>
+
+			    <p:column headerText="Cargo">
+			        <h:outputText value="#{contato.cargoContato}" />
+			    </p:column>
+
+			    <p:column headerText="Dep.">
+			        <h:outputText value="#{contato.departamentoContato}" />
+			    </p:column>
+			</p:dataTable>
+				
+				<br/>
+			</ui:fragment>
+		
+		<!-- fim da listagem de contatos -->
+
+		<div class="control-group">
+			<div class="controls">
+				<p:commandButton 
+					value="Salvar"
+					action="#{clienteMB.salvar}" 
+					styleClass="btn btn-success" 
+					onclick="dlg.show();"
+					oncomplete="dlg.hide();"
+					rendered="#{clienteMB.cliente != null}" />
+				
+				<p:button value="Cancelar"
+					outcome="listaClientes" styleClass="btn" />
+					    
+			    <p:commandButton 
+			    	value="Excluir"
+			    	action="#{clienteMB.remover}" 
+					rendered="#{clienteMB.cliente.id != null}" 
+					immediate="true"
+					styleClass="btn btn-danger" />		    
+			    
+			</div>
+		</div>
+		
+		<p:dialog id="dialog" header="Processando" widgetVar="dlg" dynamic="true" modal="true">
+	    	<h:outputText value="Aguarde, processando requisição" />
+		</p:dialog>
+	
+		<p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
+	</h:form>
+</ui:fragment>

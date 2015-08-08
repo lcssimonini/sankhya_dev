@@ -52,7 +52,7 @@ public abstract class GenericDao<T, PK> {
 		return (T) this.entityManager.find(this.clazz, pk);
 	}
 
-	public void save(T entity) {
+	public void save(T entity) throws Exception {
 		try {
 			this.beginTransaction();
 			this.entityManager.persist(entity);
@@ -63,7 +63,7 @@ public abstract class GenericDao<T, PK> {
 		}
 	}
 
-	public void update(T entity) {
+	public void update(T entity) throws Exception {
 		try {
 			this.beginTransaction();
 			this.entityManager.merge(entity);
