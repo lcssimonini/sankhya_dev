@@ -21,7 +21,7 @@
 			<fieldset>
 				<h:outputText value="Busca de clientes" />
 					<h:inputText 
-						value="#{contatoMB.nomeBusca}"
+						value="#{clienteMB.nomeBusca}"
 						label="Busca nome"
 						required="true"
 						styleClass="input-large">
@@ -32,8 +32,7 @@
 						action="#{clienteMB.buscar}" 
 						styleClass="btn btn-success" 
 						onclick="dlg.show();"
-						oncomplete="dlg.hide();"
-						rendered="#{contatoMB.contato != null}" />
+						oncomplete="dlg.hide();"/>
 			</fieldset>
 		</h:form>
 		

@@ -9,6 +9,8 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
+import br.com.simonini.daos.ClienteDao;
+import br.com.simonini.entities.Cliente;
 import br.com.simonini.entities.Contato;
 import br.com.simonini.keys.ContatoClientePK;
 import br.com.simonini.session.ContatoBean;
@@ -93,8 +95,14 @@ public class ContatoMB implements Serializable {
 
 	
 	public String salvar() {
+		ClienteDao cliDao = new ClienteDao(Cliente.class);
+		
+		Cliente cliente = cliDao.findById(new Long(clienteId));
+		
 		ContatoClientePK pk = new ContatoClientePK(new Long(clienteId));
 		contato.setId(pk);
+		contato.setCliente(cliente);
+
 		try {
 			contatoBean.save(contato);
 		} catch(Exception ex) {

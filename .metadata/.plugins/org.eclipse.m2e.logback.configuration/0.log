@@ -740,3 +740,17 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/prime-ejb-crud
 2015-08-07 22:01:03,063 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2015-08-07 22:01:03,073 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-08-07 22:01:03,074 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\lcssimonini\git\prime-ejb-crud\src\test\resources
+2015-08-08 10:27:50,422 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-08 10:27:50,480 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2015-08-08 10:27:50,492 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-08 10:27:50,492 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\lcssimonini\git\prime-ejb-crud\src\test\resources
+2015-08-09 20:44:27,025 [Worker-37] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for prime-ejb-crud
+2015-08-09 20:44:34,603 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-09 20:44:34,604 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2015-08-09 20:44:34,662 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-09 20:44:34,663 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\lcssimonini\git\prime-ejb-crud\src\test\resources
+2015-08-09 20:52:48,116 [Worker-44] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for prime-ejb-crud
+2015-08-09 20:52:49,734 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-09 20:52:49,736 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2015-08-09 20:52:49,760 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-08-09 20:52:49,760 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\lcssimonini\git\prime-ejb-crud\src\test\resources

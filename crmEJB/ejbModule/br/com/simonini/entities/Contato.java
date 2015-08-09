@@ -6,7 +6,6 @@ import java.util.Map;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -22,9 +21,9 @@ public class Contato implements Serializable{
 	@EmbeddedId
 	private ContatoClientePK id;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-    private Cliente cliente;
-	
+	@ManyToOne
+	private Cliente cliente;
+
 	private String nome;
 	private String email;
 	private String telefone;
@@ -77,6 +76,14 @@ public class Contato implements Serializable{
     public Contato(ContatoClientePK id) {
     	this.id = id;
     }
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
     
     public Contato(ContatoClientePK pk, Cliente cliente, String nome,
 			String email, String telefone, Integer cargo, Integer departamento) {
@@ -139,14 +146,6 @@ public class Contato implements Serializable{
     public void setId(ContatoClientePK id){
     	this.id = id;
     }
-
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
 
 	public String getNome() {
 		return nome;
