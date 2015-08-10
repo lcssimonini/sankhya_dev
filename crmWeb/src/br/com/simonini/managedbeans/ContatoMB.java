@@ -101,19 +101,28 @@ public class ContatoMB implements Serializable {
 
 	
 	public String salvar() {
-		ClienteDao cliDao = new ClienteDao(Cliente.class);
-		
-		Cliente cliente = cliDao.findById(new Long(clienteId));
-		
-		ContatoClientePK pk = new ContatoClientePK(new Long(clienteId));
-		contato.setId(pk);
-		contato.setCliente(cliente);
+		if (contato.getId() == null) {
+			ClienteDao cliDao = new ClienteDao(Cliente.class);
+			
+			Cliente cliente = cliDao.findById(new Long(clienteId));
+			
+			ContatoClientePK pk = new ContatoClientePK(new Long(clienteId));
+			contato.setId(pk);
+			contato.setCliente(cliente);
 
-		try {
-			contatoBean.save(contato);
-		} catch(Exception ex) {
-			SimoUtils.addMessage("Não foi possível salvar o contato", ex.getMessage());
-			return "";
+			try {
+				contatoBean.save(contato);
+			} catch(Exception ex) {
+				SimoUtils.addMessage("Não foi possível salvar o contato", ex.getMessage());
+				return "";
+			}	
+		} else {
+			try {
+				contatoBean.update(contato);
+			} catch(Exception ex) {
+				SimoUtils.addMessage("Não foi possível editar o contato", ex.getMessage());
+				return "";
+			}	
 		}
 		return "listaClientes";
 	}

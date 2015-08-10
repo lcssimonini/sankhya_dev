@@ -18,7 +18,7 @@ public class ClienteDao extends GenericDao<Cliente, Long> {
 	
 	public List<Cliente> findByNome(String nome) {
 		Query q = this.getEntityManager().createQuery("select object(c) from Cliente as c where c.nome like :nome");
-		q.setParameter("nome", nome);
+		q.setParameter("nome", "%" + nome + "%");
 		
 		List<Cliente> result = (List<Cliente>) q.getResultList();
 		

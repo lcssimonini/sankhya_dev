@@ -8,6 +8,10 @@
 	<ui:define name="pageTitle">
 		<h:outputText value="Listagem de clientes" />
 	</ui:define>
+	
+	<f:metadata>
+		<f:event type="preRenderView" listener="#{clienteMB.buscar}" />
+	</f:metadata>
 
 	<ui:define name="content">
 		<div style="border-bottom: 1px solid #E5E5E5;">
@@ -19,14 +23,16 @@
 		
 		<h:form styleClass="form-horizontal">
 			<fieldset>
+			
 				<h:outputText value="Busca de clientes" />
+					
 					<h:inputText 
 						value="#{clienteMB.nomeBusca}"
 						label="Busca nome"
 						required="true"
 						styleClass="input-large">
-						<f:validateLength minimum="2" maximum="60" />
 					</h:inputText>
+					
 					<p:commandButton 
 						value="Buscar"
 						action="#{clienteMB.buscar}" 

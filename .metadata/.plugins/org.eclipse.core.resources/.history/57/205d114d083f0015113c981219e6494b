@@ -1,0 +1,148 @@
+package br.com.simonini.managedbeans;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
+import br.com.simonini.entities.Cliente;
+import br.com.simonini.entities.Contato;
+import br.com.simonini.session.ClienteBean;
+import br.com.simonini.utils.SimoUtils;
+
+@ManagedBean(name = "clienteMB")
+@ViewScoped
+public class ClienteMB implements Serializable {
+
+	private static final long serialVersionUID = -8498185949884249551L;
+	
+	@EJB
+	private ClienteBean clienteBean;
+	
+	private Long idSelecionado;
+	
+	private List<Cliente> clientes;
+	
+	private Cliente cliente;
+	
+	public String greeting;
+	
+	private Map<String, Integer> tipo;
+	private Map<String, Integer> porte;
+
+	private String nomeBusca;
+	
+
+	@PostConstruct
+	public void init() {
+		tipo = Cliente.tipoMap;
+		porte = Cliente.porteMap;
+		buscar();
+	}
+	
+	public ClienteMB(){
+	}
+	
+	public Map<String, Integer> getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(Map<String, Integer> tipo) {
+		this.tipo = tipo;
+	}
+
+	public Map<String, Integer> getPorte() {
+		return porte;
+	}
+
+	public void setPorte(Map<String, Integer> porte) {
+		this.porte = porte;
+	}
+	
+	public void setIdSelecionado(Long idSelecionado) {
+		this.idSelecionado = idSelecionado;
+	}
+	
+	public Long getIdSelecionado() {
+		return idSelecionado;
+	}
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
+	
+	public String getNomeBusca() {
+		return nomeBusca;
+	}
+
+	public void setNomeBusca(String nomeBusca) {
+		this.nomeBusca = nomeBusca;
+	}
+	
+	public String buscar() {
+		if (this.nomeBusca != null) {
+			this.clientes = clienteBean.findByNome(this.nomeBusca);
+		}
+	}
+	
+	public void incluir(){
+		cliente = new Cliente();
+	}
+	
+	public void editar() {
+		if (idSelecionado == null) {
+			return;
+		}
+		cliente = clienteBean.findById(idSelecionado);
+	}
+	
+	public List<Cliente> getClientes() {
+		if (clientes == null) {
+			clientes = clienteBean.findAll();
+		}
+		return clientes;
+	}
+	
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
+    }
+
+	
+	public String salvar() {
+		if (cliente.getId() != null) {
+			try {
+				clienteBean.update(cliente);
+			} catch(Exception ex) {
+				SimoUtils.addMessage("Não foi possível editar o cliente: "+ex.getMessage(), ex.getMessage());
+				return "";
+			}			
+		} else {
+			try {
+				clienteBean.save(cliente);
+			} catch(Exception ex) {
+				SimoUtils.addMessage("Não foi possível salvar o cliente: "+ex.getMessage(), ex.getMessage());
+				return "";
+			}
+		}
+		return "listaClientes";
+	}
+	
+	public String remover() {
+		try {
+			clienteBean.delete(cliente);
+		} catch(Exception ex) {
+			SimoUtils.addMessage("Não foi possível remover o contato", ex.getMessage());
+			return "";
+		}
+		return "listaClientes";
+	}
+	
+	public void adicionarContato(Contato contato) {
+		
+		
+	}
+}

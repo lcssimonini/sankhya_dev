@@ -74,16 +74,18 @@
 
 		<div class="control-group">
 			<div class="controls">
+				
 				<p:commandButton 
 					value="Salvar"
 					action="#{contatoMB.salvar}" 
 					styleClass="btn btn-success" 
 					onclick="dlg.show();"
 					oncomplete="dlg.hide();"
-					rendered="#{contatoMB.contato != null}" />
+					rendered="#{contatoMB.contato != null}" >
+				</p:commandButton>
 				
 				<p:button value="Cancelar"
-					outcome="formCliente" styleClass="btn" />
+					outcome="listaClientes" styleClass="btn" />
 					    
 			    <p:commandButton 
 			    	value="Excluir"

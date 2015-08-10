@@ -1,0 +1,109 @@
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:form styleClass="form-horizontal">
+		<fieldset>
+			<h:outputText value="Cadastro de contato" />
+			
+			<div class="control-group">
+				<label class="control-label">
+					<h:outputText value="Nome:" /></label>
+				<div class="controls">
+					<h:inputText 
+						value="#{contatoMB.contato.nome}"
+						label="Nome" 
+						required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="2" maximum="60" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Email" /></label>
+				<div class="controls">
+					<h:inputText value="#{contatoMB.contato.email}"
+						label="Email" required="true"
+						styleClass="input-large">
+						<f:validateLength minimum="0" maximum="60" />
+						<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
+					</h:inputText>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Telefone" /></label>
+				<div class="controls">
+					<h:inputText value="#{contatoMB.contato.telefone}"
+						label="Número" required="false"
+						styleClass="input-large">
+						<f:validateLength minimum="0" maximum="4" />
+					</h:inputText>
+				</div>
+			</div>
+			
+		
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Cargo" /></label>
+				<div class="controls">
+					<p:selectOneMenu id="cargo" value="#{contatoMB.contato.cargo}" style="width:150px">
+                		<f:selectItem itemLabel="Selecione o cargo" itemValue="" noSelectionOption="true" />
+                		<f:selectItems value="#{contatoMB.cargo}" />
+            		</p:selectOneMenu>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"><h:outputText
+						value="Departamento" /></label>
+				<div class="controls">
+					<p:selectOneMenu id="departamento" value="#{contatoMB.contato.departamento}" style="width:150px">
+                		<f:selectItem itemLabel="Selecione o departamento" itemValue="" noSelectionOption="true" />
+                		<f:selectItems value="#{contatoMB.departamento}" />
+            		</p:selectOneMenu>
+				</div>
+			</div>
+			
+		</fieldset>
+
+		<div class="control-group">
+			<div class="controls">
+					<h:link outcome="editarCliente" value="#{contato.nome}">
+						<f:param name="id" value="#{cliente.id}" />
+					</h:link>
+				
+				<p:commandButton 
+					value="Salvar"
+					action="#{contatoMB.salvar}" 
+					styleClass="btn btn-success" 
+					onclick="dlg.show();"
+					oncomplete="dlg.hide();"
+					rendered="#{contatoMB.contato != null}" />
+					<f:param name="id" value="#{contatoMB.clienteId}" />
+				
+				<p:button value="Cancelar"
+					outcome="formCliente" styleClass="btn" />
+					    
+			    <p:commandButton 
+			    	value="Excluir"
+			    	action="#{contatoMB.remover}" 
+					rendered="#{contatoMB.contato.id != null}" 
+					immediate="true"
+					styleClass="btn btn-danger" />		    
+			    
+			</div>
+		</div>
+		
+		<p:dialog id="dialog" header="Processando" widgetVar="dlg" dynamic="true" modal="true">
+	    	<h:outputText value="Aguarde, processando requisição" />
+		</p:dialog>
+	
+		<p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
+	</h:form>
+</ui:fragment>
