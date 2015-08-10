@@ -22,7 +22,7 @@
 						label="Nome" 
 						required="true"
 						styleClass="input-large"
-						validatorMessage="Nome: O nome é obrigatório">
+						validatorMessage="O nome é obrigatório">
 						<f:validateLength minimum="2" maximum="60" />
 					</p:inputText>
 				</div>

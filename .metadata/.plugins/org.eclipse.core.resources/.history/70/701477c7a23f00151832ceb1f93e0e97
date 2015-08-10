@@ -19,8 +19,7 @@
 						value="#{contatoMB.contato.nome}"
 						label="Nome" 
 						required="true"
-						styleClass="input-large"
-						validatorMessage="Nome: O nome é obrigatório">
+						styleClass="input-large">
 						<f:validateLength minimum="2" maximum="60" />
 					</p:inputText>
 				</div>
@@ -35,8 +34,7 @@
 						id="email"
 						value="#{contatoMB.contato.email}"
 						label="Email" required="false"
-						styleClass="input-large"
-						validatorMessage="Email: não é um email válido">
+						styleClass="input-large">
 						<f:validateLength minimum="0" maximum="60" />
 						<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
 					</p:inputText>
@@ -48,14 +46,13 @@
 				<label class="control-label"><h:outputText
 						value="Telefone" /></label>
 				<div class="controls">
-					<p:inputMask 
+					<p:inputText 
 						id="num"
 						value="#{contatoMB.contato.telefone}"
 						label="Número" required="false"
-						styleClass="input-large"
-						mask="(99) 999-9999">
-						<f:validateLength minimum="0" maximum="13" />
-					</p:inputMask>
+						styleClass="input-large">
+						<f:validateLength minimum="0" maximum="4" />
+					</p:inputText>
 				</div>
 				<p:message for="num" />
 			</div>
@@ -80,15 +77,11 @@
 				<label class="control-label"><h:outputText
 						value="Departamento" /></label>
 				<div class="controls">
-					<p:selectOneMenu 
-						id="departamento" 
-						value="#{contatoMB.contato.departamento}" 
-						style="width:150px">
+					<p:selectOneMenu id="departamento" value="#{contatoMB.contato.departamento}" style="width:150px">
                 		<f:selectItem itemLabel="Selecione o departamento" itemValue="" noSelectionOption="true" />
                 		<f:selectItems value="#{contatoMB.departamento}" />
             		</p:selectOneMenu>
 				</div>
-				<p:message for="departamento" />
 			</div>
 			
 		</fieldset>
