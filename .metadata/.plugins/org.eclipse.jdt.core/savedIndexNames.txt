@@ -112,7 +112,6 @@ INDEX VERSION 1.127+C:\lucas-java\workspace\teste_dev_java\.metadata\.plugins\or
 1020375546.index
 1545804918.index
 1416653230.index
-3949078380.index
 4182240167.index
 2471340177.index
 1432471654.index
