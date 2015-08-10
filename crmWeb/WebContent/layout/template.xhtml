@@ -35,13 +35,12 @@
 				</div>
 				<div class="span10">
 					<ui:insert name="content"></ui:insert>
-
-					<ui:insert name="footer">
-						<ui:include src="footer.xhtml" />
-					</ui:insert>
 				</div>
 			</div>
 		</div>
+		<ui:insert name="footer">
+			<ui:include src="footer.xhtml" />
+		</ui:insert>
 
 	</f:view>
 </h:body>

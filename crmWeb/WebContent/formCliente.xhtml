@@ -10,114 +10,156 @@
 					<h:outputText value="Cadastro de cliente" />
 				</h3>
 			
+			<p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
+			
 			<div class="control-group">
 				<label class="control-label">
 					<h:outputText value="Nome:" /></label>
 				<div class="controls">
-					<h:inputText 
+					<p:inputText 
+						id="nome"
 						value="#{clienteMB.cliente.nome}"
 						label="Nome" 
 						required="true"
-						styleClass="input-large">
+						styleClass="input-large"
+						validatorMessage="O nome é obrigatório">
 						<f:validateLength minimum="2" maximum="60" />
-					</h:inputText>
+					</p:inputText>
 				</div>
+				<p:message for="nome" />
 			</div>
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Endereço" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.endereco}"
-						label="Endereço" required="false"
+					<h:inputText
+						id="end"
+						value="#{clienteMB.cliente.endereco}"
+						label="Endereço" 
+						required="false"
 						styleClass="input-large">
-						<f:validateLength minimum="0" maximum="60" />
+						<f:validateLength maximum="60" />
 					</h:inputText>
 				</div>
+				<p:message for="end" />
 			</div>
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Número" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.numero}"
-						label="Número" required="false"
-						styleClass="input-small">
-						<f:validateLength minimum="0" maximum="4" />
-					</h:inputText>
+					<p:inputText 
+						id="numero"
+						value="#{clienteMB.cliente.numero}"
+						label="Número" 
+						required="false"
+						styleClass="input-small"
+						validatorMessage="Número: Apenas números são permitidos">
+					</p:inputText>
 				</div>
+				<p:message for="numero" />
 			</div>
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Telefone" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.telefone}"
-						label="Telefone" required="false"
-						styleClass="input-large">
-						<f:validateLength minimum="0" maximum="4" />
-					</h:inputText>
+					<p:inputMask 
+						id="tel"
+						value="#{clienteMB.cliente.telefone}"
+						label="Telefone" 
+						required="false"
+						styleClass="input-large"
+						mask="(99) 999-9999">
+						<f:validateLength minimum="0" maximum="13" />
+					</p:inputMask>
+				
 				</div>
+				<p:message for="tel" />
 			</div>
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Tipo" /></label>
 				<div class="controls">
-					<p:selectOneMenu id="tipo" value="#{clienteMB.cliente.tipo}" style="width:150px">
+					<p:selectOneMenu 
+						id="tipo" 
+						value="#{clienteMB.cliente.tipo}" 
+						style="width:150px">
+                		
                 		<f:selectItem itemLabel="Selecione o tipo" itemValue="" noSelectionOption="true" />
                 		<f:selectItems value="#{clienteMB.tipo}" />
             		</p:selectOneMenu>
 				</div>
+				<p:message for="tipo" />
 			</div>
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Documento" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.documento}"
-						label="Documento" required="false"
-						styleClass="input-large">
-						<f:validateLength minimum="0" maximum="12" />
-					</h:inputText>
+					<p:inputText 
+						id="doc"
+						value="#{clienteMB.cliente.documento}"
+						label="Documento" 
+						required="false"
+						styleClass="input-large"
+						validatorMessage="Documento: São permitidos apenas 15 caracretes">
+						<f:validateLength maximum="15" />
+					</p:inputText>
 				</div>
+				<p:message for="doc" />
 			</div>
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Cidade" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.cidade}"
-						label="Cidade" required="false"
+					<h:inputText 
+						id="cidade"
+						value="#{clienteMB.cliente.cidade}"
+						label="Cidade" 
+						required="false"
 						styleClass="input-large">
-						<f:validateLength minimum="0" maximum="30" />
+						<f:validateLength maximum="30" />
 					</h:inputText>
 				</div>
+				<p:message for="cidade" />
 			</div>
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Estado" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.estado}"
-						label="Estado" required="false"
+					<h:inputText 
+						id="estado"
+						value="#{clienteMB.cliente.estado}"
+						label="Estado" 
+						required="false"
 						styleClass="input-small">
 						<f:validateLength minimum="0" maximum="2" />
 					</h:inputText>
 				</div>
+				<p:message for="estado" />
 			</div>
 
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Email" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.email}"
-						label="Email" required="false"
-						styleClass="input-large">
+					<p:inputText 
+						id="email"
+						value="#{clienteMB.cliente.email}"
+						label="Email" 
+						required="true"
+						styleClass="input-large"
+						validatorMessage="Email: Não é um email válido">
 						<f:validateLength minimum="0" maximum="60" />
 						<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
-					</h:inputText>
+					</p:inputText>
 				</div>
+				<p:message for="email" />
 			</div>
 			
 			<div class="control-group">
@@ -133,18 +175,25 @@
                 		<f:selectItems value="#{clienteMB.porte}" />
             		</p:selectOneMenu>
 				</div>
+				<p:message for="porte" />
 			</div>
 			
 			<div class="control-group">
 				<label class="control-label"><h:outputText
 						value="Limite de crédito" /></label>
 				<div class="controls">
-					<h:inputText value="#{clienteMB.cliente.limiteCredito}"
-						label="Limite de crédito" required="true"
-						styleClass="input-large">
+					<p:inputText 
+						id="cred"
+						value="#{clienteMB.cliente.limiteCredito}"
+						label="Limite de crédito" 
+						required="true"
+						styleClass="input-large"
+						validatorMessage="Limite de crédito: Apenas números são permitidos">
 						<f:validateLength minimum="0" maximum="30" />
-					</h:inputText>
+						<f:validateDoubleRange minimum="0" />
+					</p:inputText>
 				</div>
+				<p:message for="cred" />
 			</div>
 			
 		</fieldset>
@@ -237,7 +286,5 @@
 		<p:dialog id="dialog" header="Processando" widgetVar="dlg" dynamic="true" modal="true">
 	    	<h:outputText value="Aguarde, processando requisição" />
 		</p:dialog>
-	
-		<p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
 	</h:form>
 </ui:fragment>

@@ -93,11 +93,11 @@ public class ClienteMB implements Serializable {
 	
 	public void editar() {
 		if (idSelecionado == null) {
-			return;
+	return;
 		}
 		cliente = clienteBean.findById(idSelecionado);
 	}
-	
+
 	public List<Cliente> getClientes() {
 		if (clientes == null) {
 			clientes = clienteBean.findAll();
