@@ -1,0 +1,17 @@
+1438731382986	Rename field 'clienteBean'
+1438731390475	Rename field 'clientes'
+1438731396386	Rename field 'cliente'
+1438731831865	Rename resource 'messages_labels.properties'
+1438733112868	Move 2 resources to 'resources'
+1438776671803	Rename resource 'formMercadoria.xhtml'
+1438777744786	Rename resource 'incluirMercadoria.xhtml'
+1438777771945	Rename resource 'editarMercadoria.xhtml'
+1438906741251	Copy file
+1438907080689	Rename field 'tipo'
+1438944823493	Rename type 'ScreenUtils'
+1438945776810	Copy compilation unit
+1438947817330	Copy file
+1438947832044	Rename resource 'Copy of incluir.xhtml'
+1438951021980	Encapsulate field 'clienteId'
+1438953576855	Copy file
+1438986227326	Delete element

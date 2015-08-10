@@ -1311,3 +1311,32 @@
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-08-10 17:17:05.430
 !MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-08-10 18:04:38.711
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-10 18:06:16.336
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-08-10 18:06:18.228
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-08-10 18:06:24.691
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2015-08-10 18:07:39.434
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298246 2015-08-10 18:09:25.971
+!MESSAGE Unable to delete module
+!SUBENTRY 1 org.jboss.ide.eclipse.as.wtp.core 4 1644298251 2015-08-10 18:09:25.971
+!MESSAGE Could not delete C:\Users\lcssimonini\wildfly-8.2.0.Final\standalone\deployments\crm.war. May be locked by another process.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2015-08-10 18:09:26.034
+!MESSAGE The server "WildFly 8.2 crm" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_51 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-08-10 18:09:27.487
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-08-10 18:09:34.397
+!MESSAGE Server Startup Succeeded
