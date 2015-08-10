@@ -9,9 +9,8 @@
 	</ui:define>
 
 	<f:metadata>
-		<f:viewParam name="cliente" value="#{contatoMB.clienteId}" />
-		<f:viewParam name="sequencia" value="#{contatoMB.sequencia}" />
-		<f:event type="preRenderView" listener="#{contatoMB.editar}" />
+		<f:viewParam name="id" value="#{contatoMB.idSelecionado}" />
+		<f:event type="preRenderView" listener="#{clienteMB.editar}" />
 	</f:metadata>
 
 	<ui:define name="content">

@@ -81,15 +81,10 @@ public class ContatoMB implements Serializable {
 	}
 	
 	public void editar() {
-		if (clienteId == null || sequencia == null) {
+		if (idSelecionado == null) {
 			return;
 		}
-		
-		ContatoClientePK pk = new ContatoClientePK();
-		pk.setIdCliente2(new Long(clienteId));
-		pk.setSequencia(new Long(sequencia));
-		
-		contato = contatoBean.findById(pk);
+		contato = contatoBean.findById(idSelecionado);
 	}
 	
 	public List<Contato> getContatos() {
@@ -134,14 +129,6 @@ public class ContatoMB implements Serializable {
 
 	public void setClienteId(String clienteId) {
 		this.clienteId = clienteId;
-	}
-
-	public String getSequencia() {
-		return sequencia;
-	}
-
-	public void setSequencia(String sequencia) {
-		this.sequencia = sequencia;
 	}
 
 }

@@ -183,8 +183,7 @@
 			    <p:column headerText="Nome">
 			    	<h:link outcome="editarContato" value="#{contato.nome}"
 						title="Editar #{contato.nome}">
-						<f:param name="cliente" value="#{contato.cliente.id}" />
-						<f:param name="sequencia" value="#{contato.sequencia}" />
+						<f:param name="id" value="#{contato.id}" />
 					</h:link>
 			    </p:column>
 			    

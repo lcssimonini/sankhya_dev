@@ -88,8 +88,7 @@ public class ContatoMB implements Serializable {
 		ContatoClientePK pk = new ContatoClientePK();
 		pk.setIdCliente2(new Long(clienteId));
 		pk.setSequencia(new Long(sequencia));
-		
-		contato = contatoBean.findById(pk);
+		contato = contatoBean.findById(idSelecionado);
 	}
 	
 	public List<Contato> getContatos() {
