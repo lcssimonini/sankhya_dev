@@ -19,4 +19,9 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.persistence.Query"/>
 <fullyQualifiedTypeName name="br.com.simonini.session.ClienteBean"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="br.com.simonini.daos.ClienteDao"/>
+<fullyQualifiedTypeName name="br.com.simonini.keys.ContatoClientePK"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="javax.faces.bean.RequestScoped"/>
 </qualifiedTypeNameHistroy>

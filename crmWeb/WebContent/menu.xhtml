@@ -9,14 +9,14 @@
 		<li class="#{empty param.active || param.active == 'lista' ? 'active' : ''}">
 			<h:link outcome="listaClientes">
 				<i class="icon-list"></i>
-				<h:outputText value="Lista" escape="false" />
+				<h:outputText value="Lista de clientes" escape="false" />
 				<f:param name="active" value="lista" />
             </h:link>
 		</li>
 		<li class="#{param.active == 'incluir' ? 'active' : ''}">
 			<h:link outcome="incluirCliente">
 				<i class="icon-pencil"></i>
-				<h:outputText value="Incluir" escape="false" />
+				<h:outputText value="Incluir cliente" escape="false" />
 				<f:param name="active" value="incluir" />
 			</h:link>
 		</li>

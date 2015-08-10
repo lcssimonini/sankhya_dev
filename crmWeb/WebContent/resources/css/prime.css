@@ -19,3 +19,19 @@
 	padding-top: 20px;
 	color: #D16727;
 }
+
+.search {
+	margin-right: 10px;
+	height: 25px !important;
+}
+
+.menu {
+	width: 150px;
+	position: relative;
+	float: left;
+}
+
+.container-lucas {
+	width: 95%;
+	margin-left: 50px;
+}

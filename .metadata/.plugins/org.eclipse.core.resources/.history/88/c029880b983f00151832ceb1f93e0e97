@@ -1,0 +1,37 @@
+.header {
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+.logo {
+	float: left;
+	width: 90px;
+	height: 71px;
+	padding-right: 20px;
+}
+
+.title {
+	font-size: 26px;
+	line-height: 38px;
+	padding-bottom: 40px;
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;
+	color: #D16727;
+}
+
+.search {
+	margin-right: 10px;
+	height: 25px !important;
+}
+
+.menu {
+	width: 150px;
+	position: relative;
+	float: left;
+}
+
+.container-lucas {
+	width: 90%;
+	margin-left: 50px;
+}

@@ -14,24 +14,20 @@
 	</f:metadata>
 
 	<ui:define name="content">
-		<div style="border-bottom: 1px solid #E5E5E5;">
 			<h3>
 				<h:outputText value="Clientes" />
 				<small> <h:outputText value="Listagem" /></small>
 			</h3>
-		</div>
 		
 		<h:form styleClass="form-horizontal">
 			<fieldset>
-			
-				<h:outputText value="Busca de clientes" />
-					
-					<h:inputText 
+					<p:inputText 
 						value="#{clienteMB.nomeBusca}"
 						label="Busca nome"
 						required="true"
-						styleClass="input-large">
-					</h:inputText>
+						styleClass="input-large search"
+						placeholder="busca de clientes">
+					</p:inputText>
 					
 					<p:commandButton 
 						value="Buscar"
